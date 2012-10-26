@@ -15,6 +15,8 @@ class Screen extends JPanel {
     ArrayList<Integer> swap;///<numbers being swapped, this is red
     ArrayList<Integer> blue;///<persistent blue bars
     ArrayList<Integer> red;///<persistent red bars
+    ArrayList<Integer> yellowtemp;///<temporary yellow, used for pivot
+    ArrayList<Integer> yellow;///<persistent yellow bars
 
     private Screen() {
     }
@@ -29,6 +31,8 @@ class Screen extends JPanel {
         this.swap = new ArrayList<Integer>();
         this.blue = new ArrayList<Integer>();
         this.red = new ArrayList<Integer>();
+        this.yellowtemp = new ArrayList<Integer>();
+        this.yellow = new ArrayList<Integer>();
     }
 
     @Override
@@ -48,16 +52,24 @@ class Screen extends JPanel {
             if (this.red.contains(i)) {
                 g2.setColor(Color.RED);
             }
+            if(this.yellow.contains(i))
+            {
+                g2.setColor(Color.YELLOW);
+            }
             if (this.compare.contains(i)) {
                 g2.setColor(Color.BLUE);
             }
             if (this.swap.contains(i)) {
                 g2.setColor(Color.RED);
             }
+            if (this.yellowtemp.contains(i)) {
+                g2.setColor(Color.YELLOW);
+            }
             g2.fillRect(loc, BaseGUI.MAXY - 10 - this.numbers.get(i), 10, this.numbers.get(i));
             loc += 12;
         }
         this.compare.clear();
+        this.yellowtemp.clear();
         this.swap.clear();
     }
 
@@ -79,27 +91,42 @@ class Screen extends JPanel {
         this.swap.add(i);
     }
 
+    public void setYellow(Integer i) {
+        this.yellowtemp.add(i);
+    }
+
     public void setPersistentBlue(Integer i) {
         this.blue.add(i);
+    }
+
+    public void setPersistentYellow(Integer i) {
+        this.yellow.add(i);
     }
 
     public void setPersistentRed(Integer i) {
         this.red.add(i);
     }
-    public void removePersistentBlue(Integer i)
-    {
-        this.blue.remove((Integer)i);
+
+    public void removePersistentBlue(Integer i) {
+        this.blue.remove((Integer) i);
     }
-    public void removePersistentRed(Integer i)
-    {
-        this.red.remove((Integer)i);
+
+    public void removePersistentYellow(Integer i) {
+        this.yellow.remove((Integer) i);
     }
-    public void clearPersistentBlue()
-    {
+
+    public void removePersistentRed(Integer i) {
+        this.red.remove((Integer) i);
+    }
+
+    public void clearPersistentBlue() {
         this.blue.clear();
     }
-    public void clearPersistentRed()
+    public void clearPersistentYellow()
     {
+        this.yellow.clear();
+    }
+    public void clearPersistentRed() {
         this.red.clear();
     }
 }

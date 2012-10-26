@@ -90,24 +90,139 @@ class Test {
         Boolean swapped = false;
         Integer gap = this.numbers.size();
         while (gap > 1 || swapped) {
-            gap = (int)(gap / 1.247330950103979);
+            gap = (int) (gap / 1.247330950103979);
             if (gap < 1) {
                 gap = 1;
             }
             Integer i = 0;
             swapped = false;
             while ((i + gap) < this.numbers.size()) {
-                if (this.numbers.get(i) > this.numbers.get(i + gap))
-                {
-                swapped = true;
-                swap(i,i+gap);
-                //System.out.println("swapping "+i+i+gap);
+                if (this.numbers.get(i) > this.numbers.get(i + gap)) {
+                    swapped = true;
+                    swap(i, i + gap);
+                    //System.out.println("swapping "+i+i+gap);
                 }
                 i++;
             }
         }
     }
 
+    public void quickSort() {
+        this.quickSort(this.numbers, 0, this.numbers.size() - 1);
+    }
+
+    public void quickSort(ArrayList<Integer> in, Integer l, Integer r) {
+        Integer left = l, right = r;
+        Integer pivot = this.numbers.get(l + (r - l) / 2);
+
+        while (left <= right) {
+            while (this.numbers.get(left) < pivot) {
+                left++;
+            }
+            while (numbers.get(right) > pivot) {
+                right--;
+            }
+            if (left <= right) {
+                swap(left, right);
+                left++;
+                right--;
+            }
+        }
+        if (l < right) {
+            this.quickSort(this.numbers, l, right);
+        }
+        if (left < r) {
+            this.quickSort(this.numbers, left, r);
+        }
+    }
+
+    public void stoogeSort()
+    {
+        this.stoogeSort(0,this.numbers.size()-1);
+    }
+    public void stoogeSort(Integer i, Integer j)
+    {
+        //System.out.println("lolstoge");
+        if (this.numbers.get(j) < this.numbers.get(i)) {
+            this.swap(i,j);
+        }
+        if ((j - i + 1) >= 3) {
+            Integer t = (j - i + 1) / 3;
+            this.stoogeSort(i  , j-t);
+            this.stoogeSort(i+t, j  );
+            this.stoogeSort(i  , j-t);
+        }
+
+    }
+    public void bogoSort() {
+
+        while(!this.isSorted())
+        {
+            System.out.println(this.numbers);
+            this.shuffle();
+        }
+    }
+    public void insertionSort()
+    {
+        for (int i = 1; i != this.numbers.size(); i++)
+        {
+            for(int ii = 0; ii != i; ii++)
+            {
+                if(this.numbers.get(ii) > this.numbers.get(i)) {
+                    this.numbers.add(ii,this.numbers.get(i));
+                    this.numbers.remove((int)i+1);
+                }
+            }
+        }
+    }
+    public void shuffle()
+    {
+        ArrayList<Integer> newlist = new ArrayList<Integer>();
+        while (!this.numbers.isEmpty()) {
+            Integer num;
+            if (this.numbers.size() == 1) {
+                num = 0;
+            } else {
+                num = this.rand.nextInt(this.numbers.size());
+            }
+            newlist.add(this.numbers.get(num));
+            this.numbers.remove((int) num);
+        }
+        for (int i = 0; i != newlist.size(); i++) {
+            this.numbers.add(newlist.get(i));
+        }
+    }/*
+    public void shellSort()
+    {
+	//# Sort an array a[0...n-1].
+        ArrayList<Integer> gaps = new ArrayList<Integer>();
+        gaps.add(701);
+        gaps.add(301);
+        gaps.add(132);
+        gaps.add(57);
+        gaps.add(23);
+        gaps.add(10);
+        gaps.add(4);
+        gaps.add(1);
+        for (int i = 0; i != gaps.size() -1; i++) {
+            for (int ii = gaps.get(i); ii < this.numbers.size(); ii++) {
+                Integer temp = this.numbers.get(ii);
+                for (int j = ii; j >= gaps.get(i) && this.numbers.get(j-gaps.get(i)) > temp; j -= gaps.get(i)) {
+                    //this.numbers.get(j) = this.numbers.get(j-gap);
+                }
+                this.numbers.get(j) = temp;
+            }
+        }
+    }*/
+    public Boolean isSorted()
+    {
+        for(int i = 1; i != this.numbers.size(); i++)
+        {
+            if(this.numbers.get(i) < this.numbers.get(i-1))
+                return false;
+        }
+        return true;
+    }
     public void swap(Integer i, Integer j) {
         Integer temp = this.numbers.get(i);//swapping
         this.numbers.set(i, this.numbers.get(j));
@@ -121,7 +236,7 @@ class Test {
     public static void main(String[] args) {
         Test t = new Test();
         System.out.println(t.getArray());
-        t.combSort();
+        t.insertionSort();
         System.out.println(t.getArray());
     }
 }

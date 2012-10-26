@@ -26,7 +26,6 @@ class BaseGUI extends JFrame implements ActionListener {
     Random rand;///<utility random number generator
     JTextField outputfilename;///<directory to place output files into
     Integer filenumber;///<output picture file number
-    
     JButton generate;///<generate random numbers
     JButton generatereverse;///<generate numbers in reverse
     JButton generateneat;///<generates neat shuffled numbers
@@ -37,6 +36,10 @@ class BaseGUI extends JFrame implements ActionListener {
     JButton gnomesortoptimized;///<start optimized gnome sort rendering
     JButton oddevensort;///<start odd-even sort rendering
     JButton combsort;///<start comb sort rendering
+    JButton quicksort;///<start quicksort rendering
+    JButton stoogesort;///<starts stoogesort rendering
+    JButton bogosort;///<starts bogosort rendering
+    JButton insertionsort;///<starts insertionsort rendering
     JButton exit;///<exits program
 
     /**
@@ -52,6 +55,8 @@ class BaseGUI extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.numbers = new ArrayList<Integer>();
         this.setLayout(new FlowLayout());
+        this.screen = new Screen(this.numbers);
+        //	(new Thread(this.screen)).start();
         this.makePanels();
         this.setResizable(false);
         this.pack();
@@ -63,7 +68,6 @@ class BaseGUI extends JFrame implements ActionListener {
      * @brief makes the left menu with all the buttons
      */
     private void makePanels() {
-        this.screen = new Screen(this.numbers);
         Dimension dim = new Dimension(BaseGUI.MAXX, BaseGUI.MAXY);
         this.screen.setSize(dim);
         this.screen.setPreferredSize(dim);
@@ -102,6 +106,18 @@ class BaseGUI extends JFrame implements ActionListener {
         this.combsort = new JButton("Comb Sort");
         this.combsort.addActionListener(this);
         this.selector.add(this.combsort);
+        this.quicksort = new JButton("Quick Sort");
+        this.quicksort.addActionListener(this);
+        this.selector.add(this.quicksort);
+        this.stoogesort = new JButton ("Stooge Sort");
+        this.stoogesort.addActionListener(this);
+        this.selector.add(this.stoogesort);
+        this.bogosort = new JButton("Bogo Sort");
+        this.bogosort.addActionListener(this);
+        this.selector.add(this.bogosort);
+        this.insertionsort = new JButton("Insertion Sort");
+        this.insertionsort.addActionListener(this);
+        this.selector.add(this.insertionsort);
 
         this.outputfilename = new JTextField("outputfiledirectory");
         this.selector.add(this.outputfilename);
@@ -121,16 +137,16 @@ class BaseGUI extends JFrame implements ActionListener {
             f.mkdir();
         }
         BufferedImage image = new BufferedImage(
-                BaseGUI.MAXX,
-                BaseGUI.MAXY,
-                BufferedImage.TYPE_INT_RGB);
+            BaseGUI.MAXX,
+            BaseGUI.MAXY,
+            BufferedImage.TYPE_INT_RGB);
         screen.paint(image.getGraphics());
         try {
             // write the image as a PNG
             ImageIO.write(
-                    image,
-                    "png",
-                    new File(this.outputfilename.getText() + "/" + this.filenumber + ".png"));
+                image,
+                "png",
+                new File(this.outputfilename.getText() + "/" + this.filenumber + ".png"));
             this.filenumber++;
             System.out.println("Saving image " + this.outputfilename.getText() + "/" + this.filenumber + ".png");
         } catch (Exception e) {
@@ -154,18 +170,17 @@ class BaseGUI extends JFrame implements ActionListener {
      */
     public void shuffle() {
         ArrayList<Integer> newlist = new ArrayList<Integer>();
-        while(!this.numbers.isEmpty()){
+        while (!this.numbers.isEmpty()) {
             Integer num;
-            if(this.numbers.size() == 1)
-            {
+            if (this.numbers.size() == 1) {
                 num = 0;
-            }else{
-            num = this.rand.nextInt(this.numbers.size() - 1);
+            } else {
+                num = this.rand.nextInt(this.numbers.size());
             }
             newlist.add(this.numbers.get(num));
             this.numbers.remove((int) num);
         }
-        for(int i = 0 ; i != newlist.size(); i++){
+        for (int i = 0; i != newlist.size(); i++) {
             this.numbers.add(newlist.get(i));
         }
         this.repaint();
@@ -375,6 +390,121 @@ class BaseGUI extends JFrame implements ActionListener {
         }
     }
 
+    public void quickSort() {
+        if (this.numbers.isEmpty()) {
+            return;
+        }
+        this.saveScreen();
+        this.quickSort(this.numbers, 0, this.numbers.size() - 1);
+        this.saveScreen();
+    }
+
+    public void quickSort(ArrayList<Integer> in, Integer l, Integer r) {
+        Integer left = l, right = r;
+        Integer pivot = this.numbers.get(l + (r - l) / 2);
+        this.setYellow(l + (r - l) / 2);
+
+        while (left <= right) {
+            while (this.numbers.get(left) < pivot) {
+                this.compare(left,l + (r - l) / 2);
+                left++;
+            }
+            while (numbers.get(right) > pivot) {
+                this.compare(right,l + (r - l) / 2);
+                right--;
+            }
+            compare(left,right);
+            if (left <= right) {
+                swap(left, right);
+                left++;
+                right--;
+            }
+        }
+        if (l < right) {
+            this.quickSort(this.numbers, l, right);
+        }
+        if (left < r) {
+            this.quickSort(this.numbers, left, r);
+        }
+    }
+    public void stoogeSort()
+    {
+        if (this.numbers.isEmpty()) {
+            return;
+        }
+        this.stoogeSort(0,this.numbers.size()-1);
+    }
+    public void stoogeSort(Integer i, Integer j)
+    {
+        //System.out.println("lolstoge");
+        this.compare(i,j);
+        if (this.numbers.get(j) < this.numbers.get(i)) {
+            this.swap(i,j);
+        }
+        if ((j - i + 1) >= 3) {
+            Integer t = (j - i + 1) / 3;
+            this.stoogeSort(i  , j-t);
+            this.stoogeSort(i+t, j  );
+            this.stoogeSort(i  , j-t);
+        }
+
+    }
+    public void bogoSort() {
+        if (this.numbers.isEmpty()) {
+            return;
+        }
+        while(!this.graphicalIsSorted())
+        {
+            this.shuffle();
+            this.saveScreen();
+        }
+    }
+    public void insertionSort()
+    {
+        if (this.numbers.isEmpty()) {
+            return;
+        }
+        for (int i = 1; i != this.numbers.size(); i++)
+        {
+            this.setPersistentYellow(i);
+            for(int ii = 0; ii != i; ii++)
+            {
+                compare(ii,i);
+                if(this.numbers.get(ii) > this.numbers.get(i)) {
+                    this.numbers.add(ii,this.numbers.get(i));
+                    this.numbers.remove((int)i+1);
+                    this.setRed(ii);
+                }
+            }
+            this.screen.removePersistentYellow(i);
+        }
+    }
+    /**
+    @brief checks if the array is sorted
+     */
+    public Boolean isSorted()
+    {
+        for(int i = 1; i != this.numbers.size(); i++)
+        {
+            if(this.numbers.get(i) < this.numbers.get(i-1))
+                return false;
+        }
+        return true;
+    }
+    /**
+    @brief checks if the array is sorted and draws the necessary graphics to show comparisons made
+     */
+    public Boolean graphicalIsSorted()
+    {
+        for(int i = 1; i != this.numbers.size(); i++)
+        {
+            this.compare(i,i-1);
+            if(this.numbers.get(i) < this.numbers.get(i-1))
+                return false;
+        }
+        return true;
+    }
+
     /**
      * @brief swaps the passed numbers and performs the correct image saves
      * @param i index A to swap with index B
@@ -403,13 +533,21 @@ class BaseGUI extends JFrame implements ActionListener {
         this.saveScreen();
     }
 
+    private void setYellow(Integer i) {
+        this.screen.setYellow(i);
+        this.saveScreen();
+    }
+
     private void setRed(Integer i) {
         this.screen.setRed(i);
         this.saveScreen();
     }
-
+    private void setPersistentYellow(Integer i)
+    {
+        this.screen.setPersistentYellow(i);
+    }
     private void setPersistentBlue(Integer i) {
-        this.screen.setPersistentBlue(i);;
+        this.screen.setPersistentBlue(i);
     }
 
     private void setPersistentRed(Integer i) {
@@ -420,11 +558,9 @@ class BaseGUI extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.generate) {
             this.generate();
-        } else if(e.getSource() == this.generateneat)
-        {
+        } else if (e.getSource() == this.generateneat) {
             this.generateNeat();
-        }
-        else if (e.getSource() == this.generatereverse) {
+        } else if (e.getSource() == this.generatereverse) {
             this.generateReverse();
         } else if (e.getSource() == this.bubblesort) {
             this.bubbleSort();
@@ -440,74 +576,23 @@ class BaseGUI extends JFrame implements ActionListener {
             this.oddEvenSort();
         } else if (e.getSource() == this.combsort) {
             this.combSort();
+        } else if (e.getSource() == this.quicksort) {
+            this.quickSort();
+        } else if(e.getSource() == this.stoogesort) {
+            this.stoogeSort();
+        } else if(e.getSource() == this.bogosort) {
+            this.bogoSort();
+        } else if(e.getSource() == this.insertionsort) {
+            this.insertionSort();
         } else if (e.getSource() == this.exit) {
             System.exit(0);
         }
+        this.filenumber = 0;
     }
 
     public void debug() {
         for (int i = 0; i != this.numbers.size(); i++) {
             System.out.println(this.numbers.get(i));
         }
-    }
-
-    public static void main(String[] args) {
-        Random rand = new Random();
-        ArrayList<Integer> numbers = new ArrayList<Integer>();
-        for (int i = 0; i != 139; i++) {
-            numbers.add(rand.nextInt(1000));
-        }
-        System.out.println(numbers);
-
-
-        /*COCKTAIL SORT
-         Integer top = 0;
-         Integer bot = 0;
-
-         Boolean swapped = false;
-         do {
-         swapped = false;
-         for (int i = 1 + bot; i != numbers.size() - top; i++) {
-         if (numbers.get(i - 1) > numbers.get(i)) {
-         Integer temp = numbers.get(i);
-         Integer j = i - 1;
-         numbers.set(i, numbers.get(j));
-         numbers.set(j, temp);
-         swapped = true;
-         }
-         }
-         if (!swapped) {
-         break;
-         }
-         top++;
-         swapped = false;
-         for (int i = numbers.size() - 1 - top; i != bot; i--) {
-         if (numbers.get(i - 1) > numbers.get(i)) {
-         Integer temp = numbers.get(i);
-         Integer j = i - 1;
-
-         numbers.set(i, numbers.get(j));
-         numbers.set(j, temp);
-         swapped = true;
-         }
-         }
-         bot++;
-         } while (swapped);
-         System.out.println(numbers);*/
-
-
-        /*selection sort
-         for (int i = 0; i != numbers.size(); i++) {
-         Integer min = i;
-         for (int ii = i; ii != numbers.size(); ii++) {
-         if (numbers.get(min) > numbers.get(ii)) {
-         min = ii;
-         }
-         }
-         Integer temp = numbers.get(min);
-         numbers.set(min, numbers.get(i));
-         numbers.set(i, temp);
-         }
-         System.out.println(numbers);*/
     }
 }
