@@ -191,10 +191,9 @@ class Test {
         for (int i = 0; i != newlist.size(); i++) {
             this.numbers.add(newlist.get(i));
         }
-    }/*
+    }
     public void shellSort()
     {
-	//# Sort an array a[0...n-1].
         ArrayList<Integer> gaps = new ArrayList<Integer>();
         gaps.add(701);
         gaps.add(301);
@@ -204,16 +203,19 @@ class Test {
         gaps.add(10);
         gaps.add(4);
         gaps.add(1);
-        for (int i = 0; i != gaps.size() -1; i++) {
-            for (int ii = gaps.get(i); ii < this.numbers.size(); ii++) {
-                Integer temp = this.numbers.get(ii);
-                for (int j = ii; j >= gaps.get(i) && this.numbers.get(j-gaps.get(i)) > temp; j -= gaps.get(i)) {
-                    //this.numbers.get(j) = this.numbers.get(j-gap);
+
+        for(int b = 0; b != gaps.size(); b++) {
+            int gap = (int)gaps.get(b);
+            for (int i = gap; i < this.numbers.size(); i++) {
+                Integer temp = this.numbers.get(i);
+                int j = i;
+                for (; j >= gap && this.numbers.get(j - gap) > temp; j -= gap) {
+                    this.numbers.set(j,this.numbers.get(j - gap));
                 }
-                this.numbers.get(j) = temp;
+                this.numbers.set(j,temp);
             }
         }
-    }*/
+    }
     public Boolean isSorted()
     {
         for(int i = 1; i != this.numbers.size(); i++)
@@ -236,7 +238,7 @@ class Test {
     public static void main(String[] args) {
         Test t = new Test();
         System.out.println(t.getArray());
-        t.insertionSort();
+        t.shellSort();
         System.out.println(t.getArray());
     }
 }

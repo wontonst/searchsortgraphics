@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-class Screen extends JPanel {
+public class Screen extends JPanel {
 
     ArrayList<Integer> numbers;///<reference to the numbers list from BaseGUI
     ImageIcon bg;///<default background
