@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Search Sort Graphics
-   &#160;<span id="projectnumber">0.1.2</span>
+   &#160;<span id="projectnumber">0.1.4 build 20130103</span>
    </div>
    <div id="projectbrief">graphic representation of search and sort algorithms</div>
   </td>
@@ -96,19 +96,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">searchsortgraphics.Algorithm Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Superclass for all sorting algorithms.  
+ <a href="classsearchsortgraphics_1_1_algorithm.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for searchsortgraphics.Algorithm:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classsearchsortgraphics_1_1_algorithm.png" usemap="#searchsortgraphics.Algorithm_map" alt=""/>
   <map id="searchsortgraphics.Algorithm_map" name="searchsortgraphics.Algorithm_map">
-<area href="classsearchsortgraphics_1_1_algorithms_1_1_bubble_sort.html" alt="searchsortgraphics.Algorithms.BubbleSort" shape="rect" coords="0,112,264,136"/>
-<area href="classsearchsortgraphics_1_1_algorithms_1_1_cocktail_sort.html" alt="searchsortgraphics.Algorithms.CocktailSort" shape="rect" coords="274,112,538,136"/>
-<area href="classsearchsortgraphics_1_1_algorithms_1_1_gnome_sort.html" alt="searchsortgraphics.Algorithms.GnomeSort" shape="rect" coords="548,112,812,136"/>
-<area href="classsearchsortgraphics_1_1_algorithms_1_1_odd_even_sort.html" alt="searchsortgraphics.Algorithms.OddEvenSort" shape="rect" coords="822,112,1086,136"/>
-<area href="classsearchsortgraphics_1_1_algorithms_1_1_quick_sort.html" alt="searchsortgraphics.Algorithms.QuickSort" shape="rect" coords="1096,112,1360,136"/>
-<area href="classsearchsortgraphics_1_1_algorithms_1_1_selection_sort.html" alt="searchsortgraphics.Algorithms.SelectionSort" shape="rect" coords="1370,112,1634,136"/>
-<area href="classsearchsortgraphics_1_1_algorithms_1_1_shell_sort.html" alt="searchsortgraphics.Algorithms.ShellSort" shape="rect" coords="1644,112,1908,136"/>
+<area href="classsearchsortgraphics_1_1_algorithms_1_1_bogo_sort.html" alt="searchsortgraphics.Algorithms.BogoSort" shape="rect" coords="315,112,620,136"/>
+<area href="classsearchsortgraphics_1_1_algorithms_1_1_bubble_sort.html" alt="searchsortgraphics.Algorithms.BubbleSort" shape="rect" coords="315,168,620,192"/>
+<area href="classsearchsortgraphics_1_1_algorithms_1_1_cocktail_sort.html" alt="searchsortgraphics.Algorithms.CocktailSort" shape="rect" coords="315,224,620,248"/>
+<area href="classsearchsortgraphics_1_1_algorithms_1_1_comb_sort.html" alt="searchsortgraphics.Algorithms.CombSort" shape="rect" coords="315,280,620,304"/>
+<area href="classsearchsortgraphics_1_1_algorithms_1_1_gnome_sort.html" alt="searchsortgraphics.Algorithms.GnomeSort" shape="rect" coords="315,336,620,360"/>
+<area href="classsearchsortgraphics_1_1_algorithms_1_1_gnome_sort_optimized.html" alt="searchsortgraphics.Algorithms.GnomeSortOptimized" shape="rect" coords="315,392,620,416"/>
+<area href="classsearchsortgraphics_1_1_algorithms_1_1_insertion_sort.html" alt="searchsortgraphics.Algorithms.InsertionSort" shape="rect" coords="315,448,620,472"/>
+<area href="classsearchsortgraphics_1_1_algorithms_1_1_odd_even_sort.html" alt="searchsortgraphics.Algorithms.OddEvenSort" shape="rect" coords="315,504,620,528"/>
+<area href="classsearchsortgraphics_1_1_algorithms_1_1_quick_sort.html" alt="searchsortgraphics.Algorithms.QuickSort" shape="rect" coords="315,560,620,584"/>
+<area href="classsearchsortgraphics_1_1_algorithms_1_1_selection_sort.html" alt="searchsortgraphics.Algorithms.SelectionSort" shape="rect" coords="315,616,620,640"/>
+<area href="classsearchsortgraphics_1_1_algorithms_1_1_shell_sort.html" alt="searchsortgraphics.Algorithms.ShellSort" shape="rect" coords="315,672,620,696"/>
+<area href="classsearchsortgraphics_1_1_algorithms_1_1_stooge_sort.html" alt="searchsortgraphics.Algorithms.StoogeSort" shape="rect" coords="315,728,620,752"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -121,6 +129,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7d7bc41b65b6a4a397679d81ee31dc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_algorithm.html#ab7d7bc41b65b6a4a397679d81ee31dc0">perform</a> ()</td></tr>
 <tr class="separator:ab7d7bc41b65b6a4a397679d81ee31dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74a8318ff481f83caf94ea5b254dee3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_algorithm.html#a74a8318ff481f83caf94ea5b254dee3c">run</a> ()</td></tr>
+<tr class="memdesc:a74a8318ff481f83caf94ea5b254dee3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">begins rendering sequence. Note that the numbers arraylist should NOT be modified while this is happening.  <a href="#a74a8318ff481f83caf94ea5b254dee3c"></a><br/></td></tr>
 <tr class="separator:a74a8318ff481f83caf94ea5b254dee3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeb1b286d6beb939ec291b17586eaa3d"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; Integer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_algorithm.html#afeb1b286d6beb939ec291b17586eaa3d">copyArray</a> ()</td></tr>
 <tr class="separator:afeb1b286d6beb939ec291b17586eaa3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,6 +140,9 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:aedd37b11532b00085d0f80266d81a44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a510f745337524ec99d5837588bae4ade"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_loading_bar.html">LoadingBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_algorithm.html#a510f745337524ec99d5837588bae4ade">bar</a></td></tr>
 <tr class="separator:a510f745337524ec99d5837588bae4ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5979b8909516014f79d3be5c0eb0d0ab"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; Integer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_algorithm.html#a5979b8909516014f79d3be5c0eb0d0ab">numbers</a></td></tr>
+<tr class="memdesc:a5979b8909516014f79d3be5c0eb0d0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to the <a class="el" href="classsearchsortgraphics_1_1_base_g_u_i.html" title="God object anti-pattern that controls most of the operations of this application.">BaseGUI</a>'s arraylits of numbers  <a href="#a5979b8909516014f79d3be5c0eb0d0ab"></a><br/></td></tr>
+<tr class="separator:a5979b8909516014f79d3be5c0eb0d0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -138,7 +150,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a3d28198128ec2514dd14f73fb03e67de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>RoyZheng </dd></dl>
+<div class="textblock"><p>Superclass for all sorting algorithms. </p>
+<dl class="section author"><dt>Author</dt><dd>RoyZheng </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a062cbf2b4c7a882ea6c0c43e644c1c23"></a>
 <div class="memitem">
@@ -278,6 +291,8 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>begins rendering sequence. Note that the numbers arraylist should NOT be modified while this is happening. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -321,13 +336,35 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5979b8909516014f79d3be5c0eb0d0ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;Integer&gt; searchsortgraphics.Algorithm.numbers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>pointer to the <a class="el" href="classsearchsortgraphics_1_1_base_g_u_i.html" title="God object anti-pattern that controls most of the operations of this application.">BaseGUI</a>'s arraylits of numbers </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/searchsortgraphics/<a class="el" href="_algorithm_8java.html">Algorithm.java</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 1 2013 20:07:23 for Search Sort Graphics by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 4 2013 18:34:07 for Search Sort Graphics by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

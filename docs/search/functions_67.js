@@ -9,6 +9,6 @@ var searchData=
   ['getnumbers',['getNumbers',['../classsearchsortgraphics_1_1_base_g_u_i.html#a9a94ab9d8f2ce15ee006f643d2b1f93f',1,'searchsortgraphics::BaseGUI']]],
   ['getscreen',['getScreen',['../classsearchsortgraphics_1_1_base_g_u_i.html#a03d1a9db13dc57fc4b524ac064b713d9',1,'searchsortgraphics::BaseGUI']]],
   ['gnomesort',['GnomeSort',['../classsearchsortgraphics_1_1_algorithms_1_1_gnome_sort.html#a12e3a8f94e771de113b027d7e27a9eb9',1,'searchsortgraphics.Algorithms.GnomeSort.GnomeSort()'],['../class_test.html#ab19ea45322dae5d29601de705d20f422',1,'Test.gnomeSort()']]],
-  ['gnomesortoptimized',['gnomeSortOptimized',['../classsearchsortgraphics_1_1_base_g_u_i.html#a00297123f65e300574349f0828e3c24f',1,'searchsortgraphics::BaseGUI']]],
+  ['gnomesortoptimized',['GnomeSortOptimized',['../classsearchsortgraphics_1_1_algorithms_1_1_gnome_sort_optimized.html#a6c535d648ba9a847ecb2bb795f18c88e',1,'searchsortgraphics::Algorithms::GnomeSortOptimized']]],
   ['graphicalissorted',['graphicalIsSorted',['../classsearchsortgraphics_1_1_base_g_u_i.html#a711956b885fcfb2976c41520c8eea019',1,'searchsortgraphics::BaseGUI']]]
 ];

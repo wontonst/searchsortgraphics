@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['calc',['calc',['../classsearchsortgraphics_1_1_algorithms_1_1_stooge_sort.html#aa607041b9e60ca911a13fc257871afdc',1,'searchsortgraphics::Algorithms::StoogeSort']]],
   ['cocktailsort',['cocktailsort',['../classsearchsortgraphics_1_1_base_g_u_i.html#ae2f61f2460fa28abbc5a596ce12bc59d',1,'searchsortgraphics::BaseGUI']]],
   ['color',['color',['../classsearchsortgraphics_1_1_loading_bar.html#a5240fc3385f131068e3e81d8edd867b1',1,'searchsortgraphics::LoadingBar']]],
   ['combsort',['combsort',['../classsearchsortgraphics_1_1_base_g_u_i.html#ada1fa3fd9057f997b4b7acdae8533cf5',1,'searchsortgraphics::BaseGUI']]],
