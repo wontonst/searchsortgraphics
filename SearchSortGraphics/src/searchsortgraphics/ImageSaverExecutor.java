@@ -11,12 +11,13 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 
 /**
- *
+ * @brief threadpool that maintains an array of ImageSaver objects
  * @author RoyZheng
  */
 public class ImageSaverExecutor {
@@ -56,7 +57,17 @@ public class ImageSaverExecutor {
         }
     }
 
+    /**
+     * @brief sets the maximum threads to use
+     * @param in
+     */
     public void setMaxThreads(Integer in) {
         this.maxthreads = in;
+        try {
+            this.exec.awaitTermination(250 / this.maxthreads, TimeUnit.SECONDS);
+        } catch (InterruptedException ex) {
+            System.out.println("ImageSaverExecutor: error settings max threads because executor could not terminate within " + 250 / this.maxthreads + " seconds.");
+        }
+        this.exec = Executors.newFixedThreadPool(maxthreads);
     }
 }

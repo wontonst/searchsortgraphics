@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import searchsortgraphics.Algorithm;
 import searchsortgraphics.BaseGUI;
-import searchsortgraphics.LoadingBar;
 
 public class BubbleSort extends Algorithm {
 
@@ -14,7 +13,6 @@ public class BubbleSort extends Algorithm {
 
     @Override
     public void perform() {
-        this.main.saveScreen();
         Boolean sorted = false;
         int iteration = 0;
         while (!sorted) {

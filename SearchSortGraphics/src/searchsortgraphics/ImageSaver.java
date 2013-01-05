@@ -9,7 +9,7 @@ import java.io.File;
 import javax.imageio.ImageIO;
 
 /**
- *
+ * @brief saves a single image
  * @author RoyZheng
  */
 public class ImageSaver implements Runnable {

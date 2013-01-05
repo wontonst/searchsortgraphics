@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import searchsortgraphics.Algorithm;
 import searchsortgraphics.BaseGUI;
-import searchsortgraphics.LoadingBar;
 
 public class CocktailSort extends Algorithm {
 
@@ -14,8 +13,6 @@ public class CocktailSort extends Algorithm {
 
     @Override
     public void perform() {
-        this.main.saveScreen();
-
         Integer top = 0;
         Integer bot = 0;
 

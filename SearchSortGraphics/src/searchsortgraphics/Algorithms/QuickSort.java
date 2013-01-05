@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import searchsortgraphics.Algorithm;
 import searchsortgraphics.BaseGUI;
-import searchsortgraphics.LoadingBar;
 
 public class QuickSort extends Algorithm {
 
@@ -18,7 +17,6 @@ public class QuickSort extends Algorithm {
     @Override
     public void perform() {
 
-        this.main.saveScreen();
         this.quickSort(this.main.getNumbers(), 0, this.main.getNumbers().size() - 1);
         this.main.saveScreen();
 

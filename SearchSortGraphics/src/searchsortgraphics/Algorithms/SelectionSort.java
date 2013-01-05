@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import searchsortgraphics.Algorithm;
 import searchsortgraphics.BaseGUI;
-import searchsortgraphics.LoadingBar;
 
 public class SelectionSort extends Algorithm {
 
@@ -14,7 +13,6 @@ public class SelectionSort extends Algorithm {
 
     @Override
     public void perform() {
-        this.main.saveScreen();
         for (int i = 0; i != this.main.getNumbers().size(); i++) {
             Integer min = i;
             this.main.setPersistentRed(min);

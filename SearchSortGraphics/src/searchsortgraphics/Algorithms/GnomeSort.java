@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import searchsortgraphics.Algorithm;
 import searchsortgraphics.BaseGUI;
-import searchsortgraphics.LoadingBar;
 
 public class GnomeSort extends Algorithm {
 
@@ -14,7 +13,6 @@ public class GnomeSort extends Algorithm {
 
     @Override
     public void perform() {
-        this.main.saveScreen();
         int index = 1;
         while (index < this.main.getNumbers().size()) {
             this.main.compare(index, index - 1);

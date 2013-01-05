@@ -1,7 +1,7 @@
 package searchsortgraphics;
 
 /**
- * @mainpage mainpage SearchSortGraphics 0.1.2 build 20121231
+ * @mainpage mainpage SearchSortGraphics 0.1.4 build 20130103
  *
  * @section summary Summary
  *

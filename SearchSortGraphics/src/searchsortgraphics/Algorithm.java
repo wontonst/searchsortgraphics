@@ -7,14 +7,14 @@ package searchsortgraphics;
 import java.util.ArrayList;
 
 /**
- *
+ * @brief Superclass for all sorting algorithms.
  * @author RoyZheng
  */
 public class Algorithm implements Runnable {
 
     protected BaseGUI main;
     protected LoadingBar bar;
-
+    protected ArrayList<Integer> numbers;///<pointer to the BaseGUI's arraylits of numbers
     public Algorithm(BaseGUI s) {
         this.main = s;
     }
@@ -29,7 +29,10 @@ public class Algorithm implements Runnable {
     public void perform() {
         throw new UnsupportedOperationException("CANNOT RUN Algorithm.perform: abstract method.");
     }
-
+/**
+ * @brief begins rendering sequence.
+ * Note that the numbers arraylist should NOT be modified while this is happening.
+ */
     @Override
     public void run() {
         if (this.main.getNumbers().isEmpty()) {
@@ -40,6 +43,7 @@ public class Algorithm implements Runnable {
 	this.bar = new LoadingBar(ops);
         this.main.setLoadingBar(this.bar);
 
+	this.main.saveScreen();
         this.perform();
         this.bar.close();
 	this.main.resetFileNumber();

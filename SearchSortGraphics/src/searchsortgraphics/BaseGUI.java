@@ -9,18 +9,27 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Random;
-import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import searchsortgraphics.Algorithms.BogoSort;
 import searchsortgraphics.Algorithms.BubbleSort;
 import searchsortgraphics.Algorithms.CocktailSort;
+import searchsortgraphics.Algorithms.CombSort;
 import searchsortgraphics.Algorithms.GnomeSort;
+import searchsortgraphics.Algorithms.GnomeSortOptimized;
+import searchsortgraphics.Algorithms.InsertionSort;
+import searchsortgraphics.Algorithms.OddEvenSort;
 import searchsortgraphics.Algorithms.QuickSort;
 import searchsortgraphics.Algorithms.SelectionSort;
 import searchsortgraphics.Algorithms.ShellSort;
+import searchsortgraphics.Algorithms.StoogeSort;
 
+/**
+ * @brief God object anti-pattern that controls most of the operations of this application.
+ * @author RoyZheng
+ */
 public class BaseGUI extends JFrame implements ActionListener {
 
     static final Integer MAXX = 1680;///<draw screen X size
@@ -154,7 +163,7 @@ public class BaseGUI extends JFrame implements ActionListener {
                 BaseGUI.MAXY,
                 BufferedImage.TYPE_INT_RGB);
         screen.paint(image.getGraphics());
-        this.saver.addRender(image, this.getFilename(),this.bar);
+        this.saver.addRender(image, this.getFilename(), this.bar);
     }
 
     public String getFilename() {
@@ -213,201 +222,6 @@ public class BaseGUI extends JFrame implements ActionListener {
             this.numbers.add(i * 1000 / 139);
         }
         this.repaint();
-    }
-
-    public void selectionSort() {
-    }
-    public void gnomeSortOptimized() {
-        if (this.numbers.isEmpty()) {
-            return;
-        }
-        this.saveScreen();
-        int pos = 1;
-        int last = 0;
-        while (pos < this.numbers.size()) {
-            this.compare(pos, pos - 1);
-            if (this.numbers.get(pos) >= this.numbers.get(pos - 1)) {
-                if (last != 0) {
-                    pos = last;
-                    last = 0;
-                }
-                pos++;
-            } else {
-                this.swap(pos, pos - 1);
-                if (pos > 1) {
-                    if (last == 0) {
-                        last = pos;
-                    }
-                    pos--;
-                } else {
-                    pos++;
-                }
-            }
-        }
-    }
-
-    public void oddEvenSort() {
-        if (this.numbers.isEmpty()) {
-            return;
-        }
-        this.saveScreen();
-        Boolean sorted = false;
-        while (!sorted) {
-            sorted = true;
-            for (int i = 1; i < this.numbers.size(); i += 2) {
-                this.compare(i, i - 1);
-                if (this.numbers.get(i) < this.numbers.get(i - 1)) {
-                    this.swap(i, i - 1);
-                    sorted = false;
-                }
-            }
-            for (int i = 2; i < this.numbers.size(); i += 2) {
-                this.compare(i, i - 1);
-                if (this.numbers.get(i) < this.numbers.get(i - 1)) {
-                    this.swap(i, i - 1);
-                    sorted = false;
-                }
-            }
-        }
-    }
-
-    public void combSort() {
-        if (this.numbers.isEmpty()) {
-            return;
-        }
-        this.saveScreen();
-        Boolean swapped = false;
-        Integer gap = this.numbers.size();
-        while (gap > 1 || swapped) {
-            gap = (int) (gap / 1.247330950103979);
-            if (gap < 1) {
-                gap = 1;
-            }
-            Integer i = 0;
-            swapped = false;
-            while ((i + gap) < this.numbers.size()) {
-                compare(i, i + gap);
-                if (this.numbers.get(i) > this.numbers.get(i + gap)) {
-                    swapped = true;
-                    swap(i, i + gap);
-                    //System.out.println("swapping "+i+i+gap);
-                }
-                i++;
-            }
-        }
-    }
-
-    public void quickSort() {
-        if (this.numbers.isEmpty()) {
-            return;
-        }
-        this.saveScreen();
-        this.quickSort(this.numbers, 0, this.numbers.size() - 1);
-        this.saveScreen();
-    }
-
-    public void quickSort(ArrayList<Integer> in, Integer l, Integer r) {
-        Integer left = l, right = r;
-        Integer pivot = this.numbers.get(l + (r - l) / 2);
-        this.setYellow(l + (r - l) / 2);
-
-        while (left <= right) {
-            while (this.numbers.get(left) < pivot) {
-                this.compare(left, l + (r - l) / 2);
-                left++;
-            }
-            while (numbers.get(right) > pivot) {
-                this.compare(right, l + (r - l) / 2);
-                right--;
-            }
-            compare(left, right);
-            if (left <= right) {
-                swap(left, right);
-                left++;
-                right--;
-            }
-        }
-        if (l < right) {
-            this.quickSort(this.numbers, l, right);
-        }
-        if (left < r) {
-            this.quickSort(this.numbers, left, r);
-        }
-    }
-
-    public void stoogeSort() {
-        if (this.numbers.isEmpty()) {
-            return;
-        }
-        this.stoogeSort(0, this.numbers.size() - 1);
-    }
-
-    public void stoogeSort(Integer i, Integer j) {
-        //System.out.println("lolstoge");
-        this.compare(i, j);
-        if (this.numbers.get(j) < this.numbers.get(i)) {
-            this.swap(i, j);
-        }
-        if ((j - i + 1) >= 3) {
-            Integer t = (j - i + 1) / 3;
-            this.stoogeSort(i, j - t);
-            this.stoogeSort(i + t, j);
-            this.stoogeSort(i, j - t);
-        }
-
-    }
-
-    public void bogoSort() {
-        if (this.numbers.isEmpty()) {
-            return;
-        }
-        while (!this.graphicalIsSorted()) {
-            this.shuffle();
-            this.saveScreen();
-        }
-    }
-
-    public void insertionSort() {
-        if (this.numbers.isEmpty()) {
-            return;
-        }
-        for (int i = 1; i != this.numbers.size(); i++) {
-            this.setPersistentYellow(i);
-            for (int ii = 0; ii != i; ii++) {
-                compare(ii, i);
-                if (this.numbers.get(ii) > this.numbers.get(i)) {
-                    this.numbers.add(ii, this.numbers.get(i));
-                    this.numbers.remove((int) i + 1);
-                    this.setRed(ii);
-                    break;
-                }
-            }
-            this.screen.removePersistentYellow(i);
-        }
-    }
-
-    public void shellSort() {
-        ArrayList<Integer> gaps = new ArrayList<Integer>();
-        gaps.add(701);
-        gaps.add(301);
-        gaps.add(132);
-        gaps.add(57);
-        gaps.add(23);
-        gaps.add(10);
-        gaps.add(4);
-        gaps.add(1);
-
-        for (int b = 0; b != gaps.size(); b++) {
-            int gap = (int) gaps.get(b);
-            for (int i = gap; i < this.numbers.size(); i++) {
-                Integer temp = this.numbers.get(i);
-                int j = i;
-                for (; j >= gap && this.numbers.get(j - gap) > temp; j -= gap) {
-                    this.numbers.set(j, this.numbers.get(j - gap));
-                }
-                this.numbers.set(j, temp);
-            }
-        }
     }
 
     /**
@@ -485,10 +299,11 @@ public class BaseGUI extends JFrame implements ActionListener {
     public void setPersistentRed(Integer i) {
         this.screen.setPersistentRed(i);
     }
-public void removePersistentRed(Integer i)
-{
-    this.screen.removePersistentBlue(i);
-}
+
+    public void removePersistentRed(Integer i) {
+        this.screen.removePersistentBlue(i);
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.generate) {
@@ -498,27 +313,27 @@ public void removePersistentRed(Integer i)
         } else if (e.getSource() == this.generatereverse) {
             this.generateReverse();
         } else if (e.getSource() == this.bubblesort) {
-	    (new Thread(new BubbleSort(this))).start();
+            (new Thread(new BubbleSort(this))).start();
         } else if (e.getSource() == this.cocktailsort) {
-	    (new Thread(new CocktailSort(this))).start();
+            (new Thread(new CocktailSort(this))).start();
         } else if (e.getSource() == this.selectionsort) {
             (new Thread(new SelectionSort(this))).start();
         } else if (e.getSource() == this.gnomesort) {
-        (new Thread(new GnomeSort(this))).start();
+            (new Thread(new GnomeSort(this))).start();
         } else if (e.getSource() == this.gnomesortoptimized) {
-            this.gnomeSortOptimized();
+            (new Thread(new GnomeSortOptimized(this))).start();
         } else if (e.getSource() == this.oddevensort) {
-            this.oddEvenSort();
+            (new Thread(new OddEvenSort(this))).start();
         } else if (e.getSource() == this.combsort) {
-            this.combSort();
+            (new Thread(new CombSort(this))).start();
         } else if (e.getSource() == this.quicksort) {
-	    (new Thread(new QuickSort(this))).start();
+            (new Thread(new QuickSort(this))).start();
         } else if (e.getSource() == this.stoogesort) {
-            this.stoogeSort();
+            (new Thread(new StoogeSort(this))).start();
         } else if (e.getSource() == this.bogosort) {
-            this.bogoSort();
+            (new Thread(new BogoSort(this))).start();
         } else if (e.getSource() == this.insertionsort) {
-            this.insertionSort();
+            (new Thread(new InsertionSort(this))).start();
         } else if (e.getSource() == this.shellsort) {
             (new Thread(new ShellSort(this))).start();
         } else if (e.getSource() == this.exit) {
@@ -526,25 +341,27 @@ public void removePersistentRed(Integer i)
         }
         this.filenumber = 0;
     }
-public ArrayList<Integer> getNumbers(){
-    return this.numbers;
-}
-public LoadingBar getLoadingBar()
-{
-    return this.bar;
-}
-public void setLoadingBar(LoadingBar in)
-{
-    this.bar = in;
-}
-    public void resetFileNumber()
-    {
-	this.filenumber = 0;
+
+    public ArrayList<Integer> getNumbers() {
+        return this.numbers;
     }
-    public Screen getScreen()
-    {
-	return this.screen;
+
+    public LoadingBar getLoadingBar() {
+        return this.bar;
     }
+
+    public void setLoadingBar(LoadingBar in) {
+        this.bar = in;
+    }
+
+    public void resetFileNumber() {
+        this.filenumber = 0;
+    }
+
+    public Screen getScreen() {
+        return this.screen;
+    }
+
     public void debug() {
         for (int i = 0; i != this.numbers.size(); i++) {
             System.out.println(this.numbers.get(i));
