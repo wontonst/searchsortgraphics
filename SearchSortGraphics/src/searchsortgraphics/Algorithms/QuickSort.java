@@ -2,7 +2,6 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import searchsortgraphics.Algorithm;
 import searchsortgraphics.BaseGUI;
 
 public class QuickSort extends Algorithm {

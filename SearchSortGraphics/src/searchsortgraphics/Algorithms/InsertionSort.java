@@ -1,7 +1,6 @@
 package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
-import searchsortgraphics.Algorithm;
 import searchsortgraphics.BaseGUI;
 
 public class InsertionSort extends Algorithm {
@@ -12,7 +11,6 @@ public class InsertionSort extends Algorithm {
 
     @Override
     public void perform() {
-        this.numbers = this.main.getNumbers();
         for (int i = 1; i != this.numbers.size(); i++) {
             this.main.setPersistentYellow(i);
             for (int ii = 0; ii != i; ii++) {

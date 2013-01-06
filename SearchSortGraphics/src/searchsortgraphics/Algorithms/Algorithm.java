@@ -2,24 +2,28 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package searchsortgraphics;
+package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
+import searchsortgraphics.BaseGUI;
+import searchsortgraphics.LoadingBar;
+import searchsortgraphics.SSGRunnable;
 
 /**
  * @brief Superclass for all sorting algorithms.
  * @author RoyZheng
  */
-public class Algorithm implements Runnable {
+public class Algorithm extends SSGRunnable implements Runnable {
 
+    static int threadnum = -1;
     protected BaseGUI main;
     protected LoadingBar bar;
-    protected ArrayList<Integer> numbers;///<pointer to the BaseGUI's arraylits of numbers
-    public Algorithm(BaseGUI s) {
-        this.main = s;
-    }
+    volatile protected ArrayList<Integer> numbers;///<pointer to the BaseGUI's arraylits of numbers
 
-    private Algorithm() {
+    public Algorithm(BaseGUI s) {
+        super(s);
+        this.main = s;
+        this.numbers = this.main.getNumbers();
     }
 
     public int calculateOperations() {
@@ -29,10 +33,11 @@ public class Algorithm implements Runnable {
     public void perform() {
         throw new UnsupportedOperationException("CANNOT RUN Algorithm.perform: abstract method.");
     }
-/**
- * @brief begins rendering sequence.
- * Note that the numbers arraylist should NOT be modified while this is happening.
- */
+
+    /**
+     * @brief begins rendering sequence. Note that the numbers arraylist should
+     * NOT be modified while this is happening.
+     */
     @Override
     public void run() {
         if (this.main.getNumbers().isEmpty()) {
@@ -40,21 +45,24 @@ public class Algorithm implements Runnable {
         }
         int ops = this.calculateOperations();
         System.out.println("Detected operation to contain " + ops + " renders.");
-	this.bar = new LoadingBar(ops);
+        this.bar = new LoadingBar(ops);
         this.main.setLoadingBar(this.bar);
 
-	this.main.saveScreen();
+        this.main.saveScreen();
         this.perform();
-        this.bar.close();
-	this.main.resetFileNumber();
+        this.main.finishRender();
     }
-    
-    public ArrayList<Integer> copyArray()
-    {
+
+    public ArrayList<Integer> copyArray() {
         ArrayList<Integer> calc = new ArrayList<Integer>();
         for (int i = 0; i != this.main.getNumbers().size(); i++) {
             calc.add(this.main.getNumbers().get(i));
         }
         return calc;
+    }
+
+    public String getThreadName() {
+        threadnum++;
+        return "SortAlgorithmThread-" + threadnum;
     }
 }

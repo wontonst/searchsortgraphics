@@ -2,7 +2,6 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import searchsortgraphics.Algorithm;
 import searchsortgraphics.BaseGUI;
 
 public class GnomeSortOptimized extends Algorithm {
@@ -13,7 +12,6 @@ public class GnomeSortOptimized extends Algorithm {
 
     @Override
     public void perform() {
-        this.numbers = this.main.getNumbers();
         this.main.saveScreen();
         int pos = 1;
         int last = 0;

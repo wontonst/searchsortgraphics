@@ -5,11 +5,12 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
+import javax.swing.JComponent;
 import javax.swing.JPanel;
 
-public class Screen extends JPanel {
+public class Screen extends JPanel{
 
-    ArrayList<Integer> numbers;///<reference to the numbers list from BaseGUI
+  volatile  ArrayList<Integer> numbers;///<reference to the numbers list from BaseGUI
     ImageIcon bg;///<default background
     ArrayList<Integer> compare;///<numbers being compared, this is blue
     ArrayList<Integer> swap;///<numbers being swapped, this is red
@@ -40,6 +41,9 @@ public class Screen extends JPanel {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
+        //g2.setColor(Color.WHITE);
+        //g2.drawRect(0,0,BaseGUI.MAXX,BaseGUI.MAXY);
+        
         if (this.numbers.size() == 0) {
             this.bg.paintIcon(this, g2, 0, 0);
         }

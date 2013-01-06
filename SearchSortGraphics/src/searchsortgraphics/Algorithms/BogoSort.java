@@ -1,6 +1,5 @@
 package searchsortgraphics.Algorithms;
 
-import searchsortgraphics.Algorithm;
 import searchsortgraphics.BaseGUI;
 
 public class BogoSort extends Algorithm {
@@ -13,7 +12,7 @@ public class BogoSort extends Algorithm {
     public void perform() {
         int iterations = 0;
         while (!this.main.graphicalIsSorted()) {
-            this.main.shuffle();
+            this.shuffle();
             this.main.saveScreen();
             iterations++;
             if (iterations > 15000) {

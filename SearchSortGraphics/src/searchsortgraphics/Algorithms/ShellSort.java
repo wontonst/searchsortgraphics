@@ -1,7 +1,6 @@
 package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
-import searchsortgraphics.Algorithm;
 import searchsortgraphics.BaseGUI;
 
 public class ShellSort extends Algorithm {
@@ -12,7 +11,6 @@ public class ShellSort extends Algorithm {
 
     @Override
     public void perform() {
-        this.numbers = this.main.getNumbers();
         ArrayList<Integer> gaps = new ArrayList<Integer>();
         gaps.add(701);
         gaps.add(301);

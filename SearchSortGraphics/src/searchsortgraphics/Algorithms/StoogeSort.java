@@ -2,7 +2,6 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import searchsortgraphics.Algorithm;
 import searchsortgraphics.BaseGUI;
 
 public class StoogeSort extends Algorithm {
@@ -28,7 +27,6 @@ public class StoogeSort extends Algorithm {
     }
 
     public void stoogeSort(Integer i, Integer j) {
-        this.numbers = this.main.getNumbers();
         //System.out.println("lolstoge");
         this.main.compare(i, j);
         if (this.numbers.get(j) < this.numbers.get(i)) {

@@ -2,7 +2,6 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import searchsortgraphics.Algorithm;
 import searchsortgraphics.BaseGUI;
 
 public class OddEvenSort extends Algorithm {
@@ -13,7 +12,6 @@ public class OddEvenSort extends Algorithm {
 
     @Override
     public void perform() {
-	this.numbers = this.main.getNumbers();
         Boolean sorted = false;
         while (!sorted) {
             sorted = true;
