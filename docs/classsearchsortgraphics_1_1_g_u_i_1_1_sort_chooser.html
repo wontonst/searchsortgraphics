@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Search Sort Graphics
-   &#160;<span id="projectnumber">0.1.4 build 20130103</span>
+   &#160;<span id="projectnumber">0.2.0 build 20130105</span>
    </div>
    <div id="projectbrief">graphic representation of search and sort algorithms</div>
   </td>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,19 +87,695 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pac-attribs">Package Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">searchsortgraphics.GUI.SortChooser Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>tabbed panel for displaying all the sorting algorithms  
+ <a href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#details">More...</a></p>
+<div class="dynheader">
+Inheritance diagram for searchsortgraphics.GUI.SortChooser:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.png" usemap="#searchsortgraphics.GUI.SortChooser_map" alt=""/>
+  <map id="searchsortgraphics.GUI.SortChooser_map" name="searchsortgraphics.GUI.SortChooser_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8821f067ead49467355f9d90b34bba72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a8821f067ead49467355f9d90b34bba72">SortChooser</a> (<a class="el" href="classsearchsortgraphics_1_1_base_g_u_i.html">BaseGUI</a> <a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#af1f4a34f30838063e49f462dae11b029">main</a>, ActionListener al)</td></tr>
+<tr class="separator:a8821f067ead49467355f9d90b34bba72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-attribs"></a>
+Package Attributes</h2></td></tr>
+<tr class="memitem:af1f4a34f30838063e49f462dae11b029"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_base_g_u_i.html">BaseGUI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#af1f4a34f30838063e49f462dae11b029">main</a></td></tr>
+<tr class="separator:af1f4a34f30838063e49f462dae11b029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a271e833b7330331b96dacbaf4b58dae0"><td class="memItemLeft" align="right" valign="top">ActionListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a271e833b7330331b96dacbaf4b58dae0">listener</a></td></tr>
+<tr class="separator:a271e833b7330331b96dacbaf4b58dae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace3fd6bf7e1cc9fd1d05be2456d2a4b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#ace3fd6bf7e1cc9fd1d05be2456d2a4b8">bubblesort</a></td></tr>
+<tr class="memdesc:ace3fd6bf7e1cc9fd1d05be2456d2a4b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts bubble sort rendering  <a href="#ace3fd6bf7e1cc9fd1d05be2456d2a4b8"></a><br/></td></tr>
+<tr class="separator:ace3fd6bf7e1cc9fd1d05be2456d2a4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45534b5fa76add2bb21f82c30ea12efe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a45534b5fa76add2bb21f82c30ea12efe">cocktailsort</a></td></tr>
+<tr class="memdesc:a45534b5fa76add2bb21f82c30ea12efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts cocktail sort rendering  <a href="#a45534b5fa76add2bb21f82c30ea12efe"></a><br/></td></tr>
+<tr class="separator:a45534b5fa76add2bb21f82c30ea12efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa290584c1b1a724730ab6ee9174685"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a6fa290584c1b1a724730ab6ee9174685">gnomesort</a></td></tr>
+<tr class="memdesc:a6fa290584c1b1a724730ab6ee9174685"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts gnome sort rendering  <a href="#a6fa290584c1b1a724730ab6ee9174685"></a><br/></td></tr>
+<tr class="separator:a6fa290584c1b1a724730ab6ee9174685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d40d025c87dfb4cfe9c8897222cfeb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a1d40d025c87dfb4cfe9c8897222cfeb3">gnomesortoptimized</a></td></tr>
+<tr class="memdesc:a1d40d025c87dfb4cfe9c8897222cfeb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">start optimized gnome sort rendering  <a href="#a1d40d025c87dfb4cfe9c8897222cfeb3"></a><br/></td></tr>
+<tr class="separator:a1d40d025c87dfb4cfe9c8897222cfeb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a7965889b11bab63fa0d6f31ea202d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a2a7965889b11bab63fa0d6f31ea202d9">oddevensort</a></td></tr>
+<tr class="memdesc:a2a7965889b11bab63fa0d6f31ea202d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">start odd-even sort rendering  <a href="#a2a7965889b11bab63fa0d6f31ea202d9"></a><br/></td></tr>
+<tr class="separator:a2a7965889b11bab63fa0d6f31ea202d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5b492724680d0a14eb30c30c4bbcb35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#af5b492724680d0a14eb30c30c4bbcb35">combsort</a></td></tr>
+<tr class="memdesc:af5b492724680d0a14eb30c30c4bbcb35"><td class="mdescLeft">&#160;</td><td class="mdescRight">start comb sort rendering  <a href="#af5b492724680d0a14eb30c30c4bbcb35"></a><br/></td></tr>
+<tr class="separator:af5b492724680d0a14eb30c30c4bbcb35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab400b063d66a20960851813b81ebafaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#ab400b063d66a20960851813b81ebafaa">quicksort</a></td></tr>
+<tr class="memdesc:ab400b063d66a20960851813b81ebafaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">start quicksort rendering  <a href="#ab400b063d66a20960851813b81ebafaa"></a><br/></td></tr>
+<tr class="separator:ab400b063d66a20960851813b81ebafaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1ba57139888f5e70d6813a8f9260a2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#aa1ba57139888f5e70d6813a8f9260a2a">stoogesort</a></td></tr>
+<tr class="memdesc:aa1ba57139888f5e70d6813a8f9260a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts stoogesort rendering  <a href="#aa1ba57139888f5e70d6813a8f9260a2a"></a><br/></td></tr>
+<tr class="separator:aa1ba57139888f5e70d6813a8f9260a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5322b85b4c65b5f0ae9d924e3fc1fcfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a5322b85b4c65b5f0ae9d924e3fc1fcfb">bogosort</a></td></tr>
+<tr class="memdesc:a5322b85b4c65b5f0ae9d924e3fc1fcfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts bogosort rendering  <a href="#a5322b85b4c65b5f0ae9d924e3fc1fcfb"></a><br/></td></tr>
+<tr class="separator:a5322b85b4c65b5f0ae9d924e3fc1fcfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa90a53d0051fb0a93e230174e63408"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#acaa90a53d0051fb0a93e230174e63408">selectionsort</a></td></tr>
+<tr class="memdesc:acaa90a53d0051fb0a93e230174e63408"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts selection sort rendering  <a href="#acaa90a53d0051fb0a93e230174e63408"></a><br/></td></tr>
+<tr class="separator:acaa90a53d0051fb0a93e230174e63408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2416fae6d7a9d9474978538d6d8793a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a2416fae6d7a9d9474978538d6d8793a3">insertionsort</a></td></tr>
+<tr class="memdesc:a2416fae6d7a9d9474978538d6d8793a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts insertionsort rendering  <a href="#a2416fae6d7a9d9474978538d6d8793a3"></a><br/></td></tr>
+<tr class="separator:a2416fae6d7a9d9474978538d6d8793a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64c8019dba6dfad33990a5eeef00a798"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a64c8019dba6dfad33990a5eeef00a798">shellsort</a></td></tr>
+<tr class="memdesc:a64c8019dba6dfad33990a5eeef00a798"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts shellsort rendering  <a href="#a64c8019dba6dfad33990a5eeef00a798"></a><br/></td></tr>
+<tr class="separator:a64c8019dba6dfad33990a5eeef00a798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a166d235fa3a1e163615348a1f78f5032"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_button_display.html">ButtonDisplay</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a166d235fa3a1e163615348a1f78f5032">exchange</a></td></tr>
+<tr class="separator:a166d235fa3a1e163615348a1f78f5032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13aeb841f43c702a1cc38d9e3f2e6541"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_button_display.html">ButtonDisplay</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a13aeb841f43c702a1cc38d9e3f2e6541">insertion</a></td></tr>
+<tr class="separator:a13aeb841f43c702a1cc38d9e3f2e6541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe06beae9c6d6bdd1215e2de142d15cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_button_display.html">ButtonDisplay</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#afe06beae9c6d6bdd1215e2de142d15cb">selection</a></td></tr>
+<tr class="separator:afe06beae9c6d6bdd1215e2de142d15cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a87076775c075bc781d47ba00f5828027"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a87076775c075bc781d47ba00f5828027">create</a> ()</td></tr>
+<tr class="separator:a87076775c075bc781d47ba00f5828027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada13a60ac7bb4e64ab84045d9e8533ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#ada13a60ac7bb4e64ab84045d9e8533ca">createExchangeSort</a> ()</td></tr>
+<tr class="separator:ada13a60ac7bb4e64ab84045d9e8533ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae582356f2cb26f3f8578480d5034c497"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#ae582356f2cb26f3f8578480d5034c497">createSelectionSort</a> ()</td></tr>
+<tr class="separator:ae582356f2cb26f3f8578480d5034c497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd81d629ba04a74b0b60bbc8e8f659f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#acd81d629ba04a74b0b60bbc8e8f659f9">createInsertionSort</a> ()</td></tr>
+<tr class="separator:acd81d629ba04a74b0b60bbc8e8f659f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a876149eae4e4c42609e17163d8f08aeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a876149eae4e4c42609e17163d8f08aeb">createMergeSort</a> ()</td></tr>
+<tr class="separator:a876149eae4e4c42609e17163d8f08aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb8a98bcf5ee6b4db88470a06653431"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#adfb8a98bcf5ee6b4db88470a06653431">createDistributionSort</a> ()</td></tr>
+<tr class="separator:adfb8a98bcf5ee6b4db88470a06653431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bebeef30c067f820622afafbd3598c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a2bebeef30c067f820622afafbd3598c0">createConcurrentSort</a> ()</td></tr>
+<tr class="separator:a2bebeef30c067f820622afafbd3598c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bb8065570faf0fb1a8d96b684790ef9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html#a9bb8065570faf0fb1a8d96b684790ef9">createHybridSort</a> ()</td></tr>
+<tr class="separator:a9bb8065570faf0fb1a8d96b684790ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>RoyZheng </dd></dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>tabbed panel for displaying all the sorting algorithms </p>
+<dl class="section author"><dt>Author</dt><dd>RoyZheng </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a8821f067ead49467355f9d90b34bba72"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">searchsortgraphics.GUI.SortChooser.SortChooser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsearchsortgraphics_1_1_base_g_u_i.html">BaseGUI</a>&#160;</td>
+          <td class="paramname"><em>main</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ActionListener&#160;</td>
+          <td class="paramname"><em>al</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a87076775c075bc781d47ba00f5828027"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchsortgraphics.GUI.SortChooser.create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2bebeef30c067f820622afafbd3598c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchsortgraphics.GUI.SortChooser.createConcurrentSort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adfb8a98bcf5ee6b4db88470a06653431"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchsortgraphics.GUI.SortChooser.createDistributionSort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ada13a60ac7bb4e64ab84045d9e8533ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchsortgraphics.GUI.SortChooser.createExchangeSort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9bb8065570faf0fb1a8d96b684790ef9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchsortgraphics.GUI.SortChooser.createHybridSort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acd81d629ba04a74b0b60bbc8e8f659f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchsortgraphics.GUI.SortChooser.createInsertionSort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a876149eae4e4c42609e17163d8f08aeb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchsortgraphics.GUI.SortChooser.createMergeSort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae582356f2cb26f3f8578480d5034c497"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchsortgraphics.GUI.SortChooser.createSelectionSort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a5322b85b4c65b5f0ae9d924e3fc1fcfb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a> searchsortgraphics.GUI.SortChooser.bogosort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>starts bogosort rendering </p>
+
+</div>
+</div>
+<a class="anchor" id="ace3fd6bf7e1cc9fd1d05be2456d2a4b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a> searchsortgraphics.GUI.SortChooser.bubblesort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>starts bubble sort rendering </p>
+
+</div>
+</div>
+<a class="anchor" id="a45534b5fa76add2bb21f82c30ea12efe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a> searchsortgraphics.GUI.SortChooser.cocktailsort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>starts cocktail sort rendering </p>
+
+</div>
+</div>
+<a class="anchor" id="af5b492724680d0a14eb30c30c4bbcb35"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a> searchsortgraphics.GUI.SortChooser.combsort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>start comb sort rendering </p>
+
+</div>
+</div>
+<a class="anchor" id="a166d235fa3a1e163615348a1f78f5032"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_button_display.html">ButtonDisplay</a> searchsortgraphics.GUI.SortChooser.exchange</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6fa290584c1b1a724730ab6ee9174685"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a> searchsortgraphics.GUI.SortChooser.gnomesort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>starts gnome sort rendering </p>
+
+</div>
+</div>
+<a class="anchor" id="a1d40d025c87dfb4cfe9c8897222cfeb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a> searchsortgraphics.GUI.SortChooser.gnomesortoptimized</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>start optimized gnome sort rendering </p>
+
+</div>
+</div>
+<a class="anchor" id="a13aeb841f43c702a1cc38d9e3f2e6541"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_button_display.html">ButtonDisplay</a> searchsortgraphics.GUI.SortChooser.insertion</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2416fae6d7a9d9474978538d6d8793a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a> searchsortgraphics.GUI.SortChooser.insertionsort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>starts insertionsort rendering </p>
+
+</div>
+</div>
+<a class="anchor" id="a271e833b7330331b96dacbaf4b58dae0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ActionListener searchsortgraphics.GUI.SortChooser.listener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af1f4a34f30838063e49f462dae11b029"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_base_g_u_i.html">BaseGUI</a> searchsortgraphics.GUI.SortChooser.main</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2a7965889b11bab63fa0d6f31ea202d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a> searchsortgraphics.GUI.SortChooser.oddevensort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>start odd-even sort rendering </p>
+
+</div>
+</div>
+<a class="anchor" id="ab400b063d66a20960851813b81ebafaa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a> searchsortgraphics.GUI.SortChooser.quicksort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>start quicksort rendering </p>
+
+</div>
+</div>
+<a class="anchor" id="afe06beae9c6d6bdd1215e2de142d15cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_button_display.html">ButtonDisplay</a> searchsortgraphics.GUI.SortChooser.selection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acaa90a53d0051fb0a93e230174e63408"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a> searchsortgraphics.GUI.SortChooser.selectionsort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>starts selection sort rendering </p>
+
+</div>
+</div>
+<a class="anchor" id="a64c8019dba6dfad33990a5eeef00a798"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a> searchsortgraphics.GUI.SortChooser.shellsort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>starts shellsort rendering </p>
+
+</div>
+</div>
+<a class="anchor" id="aa1ba57139888f5e70d6813a8f9260a2a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_sort_button.html">SSGSortButton</a> searchsortgraphics.GUI.SortChooser.stoogesort</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>starts stoogesort rendering </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/searchsortgraphics/GUI/<a class="el" href="_sort_chooser_8java.html">SortChooser.java</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 4 2013 18:34:07 for Search Sort Graphics by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 5 2013 20:44:42 for Search Sort Graphics by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

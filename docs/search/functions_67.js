@@ -1,14 +1,20 @@
 var searchData=
 [
-  ['generate',['generate',['../classsearchsortgraphics_1_1_base_g_u_i.html#a38b03f02c7d7deade18d94791d88cebb',1,'searchsortgraphics.BaseGUI.generate()'],['../class_test.html#aae9a31d55bc8fd55fbdf34950cb019a0',1,'Test.generate()']]],
-  ['generateneat',['generateNeat',['../classsearchsortgraphics_1_1_base_g_u_i.html#a1ddd786e2521c1eeddba1fdb68f39c6c',1,'searchsortgraphics::BaseGUI']]],
-  ['generatereverse',['generateReverse',['../classsearchsortgraphics_1_1_base_g_u_i.html#ab8efdc9710fa8f19268c03135ba12059',1,'searchsortgraphics::BaseGUI']]],
+  ['generate',['generate',['../classsearchsortgraphics_1_1_generators_1_1_generate_neat.html#ac28bd06613a8692cbc70789adbd2257e',1,'searchsortgraphics.Generators.GenerateNeat.generate()'],['../classsearchsortgraphics_1_1_generators_1_1_generate_random.html#a992d7824b71b561c9e6e267030863e03',1,'searchsortgraphics.Generators.GenerateRandom.generate()'],['../classsearchsortgraphics_1_1_generators_1_1_generate_reverse.html#ad1978af1b5f5fd0614b5358cc814bb00',1,'searchsortgraphics.Generators.GenerateReverse.generate()'],['../classsearchsortgraphics_1_1_generators_1_1_generator.html#a650015c389730bb85217428d3a3c1750',1,'searchsortgraphics.Generators.Generator.generate()'],['../class_test.html#aae9a31d55bc8fd55fbdf34950cb019a0',1,'Test.generate()']]],
+  ['generateneat',['GenerateNeat',['../classsearchsortgraphics_1_1_generators_1_1_generate_neat.html#a1e7195a5d0006e95d3f468b8ccb78b10',1,'searchsortgraphics::Generators::GenerateNeat']]],
+  ['generatenumbers',['GenerateNumbers',['../classsearchsortgraphics_1_1_g_u_i_1_1_generate_numbers.html#abd77cc49462be064893152134148fa56',1,'searchsortgraphics::GUI::GenerateNumbers']]],
+  ['generaterandom',['GenerateRandom',['../classsearchsortgraphics_1_1_generators_1_1_generate_random.html#ab1ae58a309d80ba05c1bc7acb5da2151',1,'searchsortgraphics::Generators::GenerateRandom']]],
+  ['generatereverse',['GenerateReverse',['../classsearchsortgraphics_1_1_generators_1_1_generate_reverse.html#a90e3e9e6872de7d24f5da6df55936ba2',1,'searchsortgraphics::Generators::GenerateReverse']]],
+  ['generator',['Generator',['../classsearchsortgraphics_1_1_generators_1_1_generator.html#ad830e74027dd5b0229976c5e6ae54ef1',1,'searchsortgraphics::Generators::Generator']]],
   ['getarray',['getArray',['../class_test.html#a664a658c07cbec3bab132d3f807aa301',1,'Test']]],
   ['getfilename',['getFilename',['../classsearchsortgraphics_1_1_base_g_u_i.html#ab3ec1b28764b83a41210878c3b9a3f62',1,'searchsortgraphics::BaseGUI']]],
   ['getloadingbar',['getLoadingBar',['../classsearchsortgraphics_1_1_base_g_u_i.html#a17376e0ed620466fbbd3f00719dc3295',1,'searchsortgraphics::BaseGUI']]],
   ['getnumbers',['getNumbers',['../classsearchsortgraphics_1_1_base_g_u_i.html#a9a94ab9d8f2ce15ee006f643d2b1f93f',1,'searchsortgraphics::BaseGUI']]],
+  ['getrand',['getRand',['../classsearchsortgraphics_1_1_base_g_u_i.html#a663588a6aee54fad59acc0886bfd647b',1,'searchsortgraphics::BaseGUI']]],
   ['getscreen',['getScreen',['../classsearchsortgraphics_1_1_base_g_u_i.html#a03d1a9db13dc57fc4b524ac064b713d9',1,'searchsortgraphics::BaseGUI']]],
-  ['gnomesort',['GnomeSort',['../classsearchsortgraphics_1_1_algorithms_1_1_gnome_sort.html#a12e3a8f94e771de113b027d7e27a9eb9',1,'searchsortgraphics.Algorithms.GnomeSort.GnomeSort()'],['../class_test.html#ab19ea45322dae5d29601de705d20f422',1,'Test.gnomeSort()']]],
+  ['getthreadname',['getThreadName',['../classsearchsortgraphics_1_1_algorithms_1_1_algorithm.html#abec80502a1568b38aeb8a2635fbf032f',1,'searchsortgraphics.Algorithms.Algorithm.getThreadName()'],['../classsearchsortgraphics_1_1_generators_1_1_generator.html#a437911e9c9405bc02fea154732fe7056',1,'searchsortgraphics.Generators.Generator.getThreadName()'],['../classsearchsortgraphics_1_1_s_s_g_runnable.html#aa89ae5dc123c4ff130077d973c041803',1,'searchsortgraphics.SSGRunnable.getThreadName()']]],
+  ['gettype',['getType',['../classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_button.html#a1952b57f7cfe1d10ee1e6bbd6bc3af99',1,'searchsortgraphics::GUI::SSGButton']]],
+  ['gnomesort',['gnomeSort',['../class_test.html#ab19ea45322dae5d29601de705d20f422',1,'Test.gnomeSort()'],['../classsearchsortgraphics_1_1_algorithms_1_1_gnome_sort.html#a12e3a8f94e771de113b027d7e27a9eb9',1,'searchsortgraphics.Algorithms.GnomeSort.GnomeSort()']]],
   ['gnomesortoptimized',['GnomeSortOptimized',['../classsearchsortgraphics_1_1_algorithms_1_1_gnome_sort_optimized.html#a6c535d648ba9a847ecb2bb795f18c88e',1,'searchsortgraphics::Algorithms::GnomeSortOptimized']]],
   ['graphicalissorted',['graphicalIsSorted',['../classsearchsortgraphics_1_1_base_g_u_i.html#a711956b885fcfb2976c41520c8eea019',1,'searchsortgraphics::BaseGUI']]]
 ];

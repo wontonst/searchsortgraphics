@@ -1,5 +1,6 @@
 var searchData=
 [
   ['filename',['filename',['../classsearchsortgraphics_1_1_image_saver.html#a2a78a8dae26fe46d5fc6bb6267166aa2',1,'searchsortgraphics::ImageSaver']]],
-  ['filenumber',['filenumber',['../classsearchsortgraphics_1_1_base_g_u_i.html#a6b32fdd3a6153a61cb64714ebef0fc07',1,'searchsortgraphics::BaseGUI']]]
+  ['filenumber',['filenumber',['../classsearchsortgraphics_1_1_base_g_u_i.html#a6b32fdd3a6153a61cb64714ebef0fc07',1,'searchsortgraphics::BaseGUI']]],
+  ['finishrender',['finishRender',['../classsearchsortgraphics_1_1_base_g_u_i.html#ad6fe4ab6140177d7425fa3c8d993d0f2',1,'searchsortgraphics::BaseGUI']]]
 ];

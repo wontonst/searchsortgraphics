@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Search Sort Graphics
-   &#160;<span id="projectnumber">0.1.4 build 20130103</span>
+   &#160;<span id="projectnumber">0.2.0 build 20130105</span>
    </div>
    <div id="projectbrief">graphic representation of search and sort algorithms</div>
   </td>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,19 +87,365 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pac-attribs">Package Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">searchsortgraphics.GUI.MainDisplay Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>the user interface  
+ <a href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.html#details">More...</a></p>
+<div class="dynheader">
+Inheritance diagram for searchsortgraphics.GUI.MainDisplay:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.png" usemap="#searchsortgraphics.GUI.MainDisplay_map" alt=""/>
+  <map id="searchsortgraphics.GUI.MainDisplay_map" name="searchsortgraphics.GUI.MainDisplay_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab8fc137571abe568ead66935a3b566e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.html#ab8fc137571abe568ead66935a3b566e3">MainDisplay</a> (<a class="el" href="classsearchsortgraphics_1_1_base_g_u_i.html">BaseGUI</a> in)</td></tr>
+<tr class="separator:ab8fc137571abe568ead66935a3b566e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3baf84acaab01a0a97ef8c6827bfa6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.html#ac3baf84acaab01a0a97ef8c6827bfa6f">actionPerformed</a> (ActionEvent e)</td></tr>
+<tr class="separator:ac3baf84acaab01a0a97ef8c6827bfa6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36aa8eedd43a06ce41959a66b52d3f9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.html#a36aa8eedd43a06ce41959a66b52d3f9a">displaySortChoose</a> ()</td></tr>
+<tr class="memdesc:a36aa8eedd43a06ce41959a66b52d3f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays the sort choose page  <a href="#a36aa8eedd43a06ce41959a66b52d3f9a"></a><br/></td></tr>
+<tr class="separator:a36aa8eedd43a06ce41959a66b52d3f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24ec898160688c53ca2f08e782ccf531"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.html#a24ec898160688c53ca2f08e782ccf531">displayNumberGenerate</a> ()</td></tr>
+<tr class="memdesc:a24ec898160688c53ca2f08e782ccf531"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays the number generation page  <a href="#a24ec898160688c53ca2f08e782ccf531"></a><br/></td></tr>
+<tr class="separator:a24ec898160688c53ca2f08e782ccf531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a3ad09c268a61d22d30302d56f7f69ea4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.html#a3ad09c268a61d22d30302d56f7f69ea4">MAXX</a> = 800</td></tr>
+<tr class="separator:a3ad09c268a61d22d30302d56f7f69ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f3f77bc5153886c604f77534baf7631"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.html#a6f3f77bc5153886c604f77534baf7631">MAXY</a> = 600</td></tr>
+<tr class="separator:a6f3f77bc5153886c604f77534baf7631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83a4818380f90c6ca607036810c33817"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.html#a83a4818380f90c6ca607036810c33817">SORT_CHOOSE</a> = &quot;0&quot;</td></tr>
+<tr class="separator:a83a4818380f90c6ca607036810c33817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af105038536f4e74dad0e092b6c75355a"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.html#af105038536f4e74dad0e092b6c75355a">NUMBER_GENERATE</a> = &quot;1&quot;</td></tr>
+<tr class="separator:af105038536f4e74dad0e092b6c75355a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-attribs"></a>
+Package Attributes</h2></td></tr>
+<tr class="memitem:a5083d2cd798b9af792931d45645e62bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html">SortChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.html#a5083d2cd798b9af792931d45645e62bd">chooser</a></td></tr>
+<tr class="separator:a5083d2cd798b9af792931d45645e62bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a227ade17faf1587ac5db042ac0ac03a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_generate_numbers.html">GenerateNumbers</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.html#a227ade17faf1587ac5db042ac0ac03a4">gen</a></td></tr>
+<tr class="separator:a227ade17faf1587ac5db042ac0ac03a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30725db8ca174aa1c43a2dee11ac0c26"><td class="memItemLeft" align="right" valign="top">CardLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.html#a30725db8ca174aa1c43a2dee11ac0c26">layout</a></td></tr>
+<tr class="separator:a30725db8ca174aa1c43a2dee11ac0c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84afe3bf7ed3f284d475b7c5ec126664"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsearchsortgraphics_1_1_base_g_u_i.html">BaseGUI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.html#a84afe3bf7ed3f284d475b7c5ec126664">main</a></td></tr>
+<tr class="memdesc:a84afe3bf7ed3f284d475b7c5ec126664"><td class="mdescLeft">&#160;</td><td class="mdescRight">reference to central control  <a href="#a84afe3bf7ed3f284d475b7c5ec126664"></a><br/></td></tr>
+<tr class="separator:a84afe3bf7ed3f284d475b7c5ec126664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab5d8effd61ac5b0b389840c0f80530c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_main_display.html#ab5d8effd61ac5b0b389840c0f80530c9">setup</a> ()</td></tr>
+<tr class="separator:ab5d8effd61ac5b0b389840c0f80530c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>RoyZheng </dd></dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>the user interface </p>
+<dl class="section author"><dt>Author</dt><dd>RoyZheng </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ab8fc137571abe568ead66935a3b566e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">searchsortgraphics.GUI.MainDisplay.MainDisplay </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsearchsortgraphics_1_1_base_g_u_i.html">BaseGUI</a>&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ac3baf84acaab01a0a97ef8c6827bfa6f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchsortgraphics.GUI.MainDisplay.actionPerformed </td>
+          <td>(</td>
+          <td class="paramtype">ActionEvent&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a24ec898160688c53ca2f08e782ccf531"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchsortgraphics.GUI.MainDisplay.displayNumberGenerate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>displays the number generation page </p>
+
+</div>
+</div>
+<a class="anchor" id="a36aa8eedd43a06ce41959a66b52d3f9a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchsortgraphics.GUI.MainDisplay.displaySortChoose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>displays the sort choose page </p>
+
+</div>
+</div>
+<a class="anchor" id="ab5d8effd61ac5b0b389840c0f80530c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchsortgraphics.GUI.MainDisplay.setup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a5083d2cd798b9af792931d45645e62bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_sort_chooser.html">SortChooser</a> searchsortgraphics.GUI.MainDisplay.chooser</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a227ade17faf1587ac5db042ac0ac03a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_g_u_i_1_1_generate_numbers.html">GenerateNumbers</a> searchsortgraphics.GUI.MainDisplay.gen</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a30725db8ca174aa1c43a2dee11ac0c26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CardLayout searchsortgraphics.GUI.MainDisplay.layout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a84afe3bf7ed3f284d475b7c5ec126664"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearchsortgraphics_1_1_base_g_u_i.html">BaseGUI</a> searchsortgraphics.GUI.MainDisplay.main</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>reference to central control </p>
+
+</div>
+</div>
+<a class="anchor" id="a3ad09c268a61d22d30302d56f7f69ea4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int searchsortgraphics.GUI.MainDisplay.MAXX = 800</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6f3f77bc5153886c604f77534baf7631"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int searchsortgraphics.GUI.MainDisplay.MAXY = 600</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af105038536f4e74dad0e092b6c75355a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String searchsortgraphics.GUI.MainDisplay.NUMBER_GENERATE = &quot;1&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a83a4818380f90c6ca607036810c33817"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String searchsortgraphics.GUI.MainDisplay.SORT_CHOOSE = &quot;0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/searchsortgraphics/GUI/<a class="el" href="_main_display_8java.html">MainDisplay.java</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 4 2013 18:34:07 for Search Sort Graphics by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 5 2013 20:44:42 for Search Sort Graphics by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>
