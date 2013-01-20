@@ -14,7 +14,7 @@ public class GenerateNeat extends Generator {
     public void generate() {
         this.numbers.clear();
         for (int i = 0; i != 139; i++) {
-            this.numbers.add(i * 1000 / 139);
+            this.numbers.add(i * (BaseGUI.MAXY-20) / 139);
         }
         this.shuffle();
     }

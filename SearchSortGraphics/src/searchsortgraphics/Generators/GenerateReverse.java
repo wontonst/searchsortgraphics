@@ -15,7 +15,7 @@ public class GenerateReverse extends Generator{
     {
         this.numbers.clear();
         for (int i = 139; i != 0; i--) {
-            this.numbers.add(i * 1000 / 139);
+            this.numbers.add(i * (BaseGUI.MAXY-20) / 139);
         } 
    }
 

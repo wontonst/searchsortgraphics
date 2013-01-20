@@ -15,7 +15,7 @@ public class GenerateRandom extends Generator {
     public void generate() {
         this.numbers.clear();
         for (int i = 0; i != 139; i++) {
-            this.numbers.add(this.main.getRand().nextInt(1000));
+            this.numbers.add(this.main.getRand().nextInt(BaseGUI.MAXY-20));
         }
     }
 }

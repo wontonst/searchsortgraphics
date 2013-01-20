@@ -1,7 +1,7 @@
 package searchsortgraphics;
 
 /**
- * @mainpage mainpage SearchSortGraphics 0.1.4 build 20130105
+ * @mainpage mainpage SearchSortGraphics 0.2.1 build 20130107
  *
  * @section summary Summary
  *
@@ -17,14 +17,19 @@ package searchsortgraphics;
  *
  * @section todo Todo
  *
- * <ul><li>Split the BaseGUI class to separate the menu and menu
- * interactions from the rest of the class.</li>
- * <li>Redo GUI to CardLayout without displaying Screen.</li>
+ * <ul>
  * <li>Every x frames show a preview on main display.</li>
+ * <li>Menu bar settings outputfiledirectory/outputfilename</li>
+ * <li>Menu bar select quick preview/full preview</li>
+ * <li>Integrate loading bar into GUI</li>
  * <span style="text-decoration:line-through">
  * <li>Split the BaseGUI class to separate the algorithms from the rest of
  * class. </li> 
- * </span></ul>
+ * <li>Redo GUI to CardLayout without displaying Screen.</li>
+ * <li>Split the BaseGUI class to separate the menu and menu
+ * interactions from the rest of the class.</li>
+ * </span>
+ * </ul>
  * 
  * @section version Notable Version History
  * v0.2.0

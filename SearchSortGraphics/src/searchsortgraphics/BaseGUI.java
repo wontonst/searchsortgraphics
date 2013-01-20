@@ -17,9 +17,9 @@ import searchsortgraphics.GUI.MainDisplay;
  */
 public class BaseGUI extends JFrame {
 
-    static final Integer MAXX = 1680;///<draw screen X size
-    static final Integer MAXY = 1050;///< draw screen Y size
-    static final Integer SELECTORMAXX = 200;///<selector screen X size
+    public static final Integer MAXX = 1680;///<draw screen X size
+    public static final Integer MAXY = 1050;///< draw screen Y size
+    public static final Integer SELECTORMAXX = 200;///<selector screen X size
     LoadingBar bar;///<loading bar frame
     ImageSaverExecutor saver;///<executorservice used to save frames
     Screen screen;///<where graphics get drawn onto

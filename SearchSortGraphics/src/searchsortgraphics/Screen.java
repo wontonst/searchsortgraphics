@@ -70,7 +70,7 @@ public class Screen extends JPanel{
                 g2.setColor(Color.YELLOW);
             }
             g2.fillRect(loc, BaseGUI.MAXY - 10 - this.numbers.get(i), 10, this.numbers.get(i));
-            loc += 12;
+            loc += ((BaseGUI.MAXX-10)/139);
         }
         this.compare.clear();
         this.yellowtemp.clear();
