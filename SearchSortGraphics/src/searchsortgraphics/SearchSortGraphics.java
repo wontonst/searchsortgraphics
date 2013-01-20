@@ -6,8 +6,7 @@ package searchsortgraphics;
  * @section summary Summary
  *
  * <p>SearchSortGraphics aims to graphically render all sorting and search
- * algorithms and output an array of image files for encoding into a video. <a
- * href="http://fixounet.free.fr/avidemux/">Avidemux</a> is an excellent
+ * algorithms and output an array of image files for encoding into a video. <a href="http://fixounet.free.fr/avidemux/">Avidemux</a> is an excellent
  * software for this purpose. The program is written all in Java.</p>
  *
  * @section hla High-Level Architecture
@@ -32,14 +31,24 @@ package searchsortgraphics;
  * </ul>
  * 
  * @section version Notable Version History
- * v0.2.0
+ * <ul>
+ * <li>
+ * v0.2.0: 
  * Complete GUI overhaul. No settings panel yet but everything else appears okay.
- * v0.1.2
+ * </li>
+ * <li>
+ * v0.1.2: 
  * Major refactoring performed, rendering and sorting is now done on threads
- * v0.1.0 
+ * </li>
+ * <li>
+ * v0.1.0: 
  * 10 sorting algorithm and 3 generation schemes all implemented, rendering complete
- * v0.2.16
+ * </li>
+ * <li>
+ * v0.2.16: 
  * Screen class deprecated, replaced with fast/versatile DynamicScreen class.
+ * </li>
+ * </ul>
  */
 /**
  * @brief initializes the application GUI and various components
