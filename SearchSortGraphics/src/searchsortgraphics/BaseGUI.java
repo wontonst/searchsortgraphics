@@ -22,7 +22,7 @@ public class BaseGUI extends JFrame {
     public static final Integer SELECTORMAXX = 200;///<selector screen X size
     LoadingBar bar;///<loading bar frame
     ImageSaverExecutor saver;///<executorservice used to save frames
-    Screen screen;///<where graphics get drawn onto
+    DynamicScreen screen;///<where graphics get drawn onto
     volatile ArrayList<Integer> numbers;///<numbers to display;
     MainDisplay gui;///<all gui
     JTextField outputfilename;///<directory to place output files into
@@ -43,7 +43,7 @@ public class BaseGUI extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.numbers = new ArrayList<Integer>();
         this.setLayout(new FlowLayout());
-        this.screen = new Screen(this.numbers);
+        this.screen = new DynamicScreen(this.numbers,BaseGUI.MAXX,BaseGUI.MAXY);
         //	(new Thread(this.screen)).start();
         this.makePanels();
         this.setResizable(false);
@@ -151,22 +151,6 @@ public class BaseGUI extends JFrame {
         this.saveScreen();
     }
 
-    public void setPersistentYellow(Integer i) {
-        this.screen.setPersistentYellow(i);
-    }
-
-    public void setPersistentBlue(Integer i) {
-        this.screen.setPersistentBlue(i);
-    }
-
-    public void setPersistentRed(Integer i) {
-        this.screen.setPersistentRed(i);
-    }
-
-    public void removePersistentRed(Integer i) {
-        this.screen.removePersistentBlue(i);
-    }
-
     public ArrayList<Integer> getNumbers() {
         return this.numbers;
     }
@@ -183,7 +167,7 @@ public class BaseGUI extends JFrame {
         this.filenumber = 0;
     }
 
-    public Screen getScreen() {
+    public DynamicScreen getScreen() {
         return this.screen;
     }
 

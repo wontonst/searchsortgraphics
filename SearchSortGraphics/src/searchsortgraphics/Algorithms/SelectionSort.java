@@ -14,18 +14,18 @@ public class SelectionSort extends Algorithm {
     public void perform() {
         for (int i = 0; i != this.main.getNumbers().size(); i++) {
             Integer min = i;
-            this.main.setPersistentRed(min);
+            this.main.getScreen().setPersistentRed(min);
             this.main.saveScreen();
             for (int ii = i; ii != this.main.getNumbers().size(); ii++) {
                 this.main.setBlue(ii);
                 if (this.main.getNumbers().get(min) > this.main.getNumbers().get(ii)) {
-                    this.main.removePersistentRed(min);
+                    this.main.getScreen().removePersistent(min);
                     min = ii;
-                    this.main.setPersistentRed(min);
+                    this.main.getScreen().setPersistentRed(min);
                 }
             }
             this.main.swap(min, i);
-            this.main.getScreen().clearPersistentRed();
+            this.main.getScreen().clearPersistent();
         }
     }
 

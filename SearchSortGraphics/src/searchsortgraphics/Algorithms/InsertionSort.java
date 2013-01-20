@@ -12,7 +12,7 @@ public class InsertionSort extends Algorithm {
     @Override
     public void perform() {
         for (int i = 1; i != this.numbers.size(); i++) {
-            this.main.setPersistentYellow(i);
+            this.main.getScreen().setPersistentYellow(i);
             for (int ii = 0; ii != i; ii++) {
                 this.main.compare(ii, i);
                 if (this.numbers.get(ii) > this.numbers.get(i)) {
@@ -22,7 +22,7 @@ public class InsertionSort extends Algorithm {
                     break;
                 }
             }
-            this.main.getScreen().removePersistentYellow(i);
+            this.main.getScreen().removePersistent(i);
         }
     }
 

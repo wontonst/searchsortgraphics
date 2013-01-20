@@ -23,6 +23,7 @@ public class Generator extends SSGRunnable implements Runnable {
     public void run() {
         this.generate();
         this.main.repaint();
+        this.main.getScreen().rebuild();
         System.out.println("Successfully generated new set of numbers.");
     }
 

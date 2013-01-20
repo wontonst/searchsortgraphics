@@ -5,9 +5,14 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
-import javax.swing.JComponent;
 import javax.swing.JPanel;
 
+/**
+ * @deprecated 
+ * @brief integer array graphical display
+ * Graphically displays the contents of an integer array
+ * @author RoyZheng
+ */
 public class Screen extends JPanel{
 
   volatile  ArrayList<Integer> numbers;///<reference to the numbers list from BaseGUI

@@ -1,7 +1,7 @@
 package searchsortgraphics;
 
 /**
- * @mainpage mainpage SearchSortGraphics 0.2.1 build 20130107
+ * @mainpage mainpage SearchSortGraphics 0.2.16 build 20130119
  *
  * @section summary Summary
  *
@@ -38,6 +38,8 @@ package searchsortgraphics;
  * Major refactoring performed, rendering and sorting is now done on threads
  * v0.1.0 
  * 10 sorting algorithm and 3 generation schemes all implemented, rendering complete
+ * v0.2.16
+ * Screen class deprecated, replaced with fast/versatile DynamicScreen class.
  */
 /**
  * @brief initializes the application GUI and various components
