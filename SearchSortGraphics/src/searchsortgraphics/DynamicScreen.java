@@ -14,7 +14,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
- * @brief advanced numbers array displayer The DynamicScreen class replaces the
+ * @brief advanced numbers array displayer. 
+ * 
+ * The DynamicScreen class replaces the
  * deprecated Screen class. Major improvements have been made. The DynamicScreen
  * automatically adjusts bar size according to the size requested by the user
  * during construction. Spacing, vertical scaling, and width are all dynamically

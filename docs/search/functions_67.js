@@ -11,10 +11,10 @@ var searchData=
   ['getloadingbar',['getLoadingBar',['../classsearchsortgraphics_1_1_base_g_u_i.html#a17376e0ed620466fbbd3f00719dc3295',1,'searchsortgraphics::BaseGUI']]],
   ['getnumbers',['getNumbers',['../classsearchsortgraphics_1_1_base_g_u_i.html#a9a94ab9d8f2ce15ee006f643d2b1f93f',1,'searchsortgraphics::BaseGUI']]],
   ['getrand',['getRand',['../classsearchsortgraphics_1_1_base_g_u_i.html#a663588a6aee54fad59acc0886bfd647b',1,'searchsortgraphics::BaseGUI']]],
-  ['getscreen',['getScreen',['../classsearchsortgraphics_1_1_base_g_u_i.html#a03d1a9db13dc57fc4b524ac064b713d9',1,'searchsortgraphics::BaseGUI']]],
+  ['getscreen',['getScreen',['../classsearchsortgraphics_1_1_base_g_u_i.html#ab3ff3b600417201e878283066505462e',1,'searchsortgraphics::BaseGUI']]],
   ['getthreadname',['getThreadName',['../classsearchsortgraphics_1_1_algorithms_1_1_algorithm.html#abec80502a1568b38aeb8a2635fbf032f',1,'searchsortgraphics.Algorithms.Algorithm.getThreadName()'],['../classsearchsortgraphics_1_1_generators_1_1_generator.html#a437911e9c9405bc02fea154732fe7056',1,'searchsortgraphics.Generators.Generator.getThreadName()'],['../classsearchsortgraphics_1_1_s_s_g_runnable.html#aa89ae5dc123c4ff130077d973c041803',1,'searchsortgraphics.SSGRunnable.getThreadName()']]],
   ['gettype',['getType',['../classsearchsortgraphics_1_1_g_u_i_1_1_s_s_g_button.html#a1952b57f7cfe1d10ee1e6bbd6bc3af99',1,'searchsortgraphics::GUI::SSGButton']]],
-  ['gnomesort',['gnomeSort',['../class_test.html#ab19ea45322dae5d29601de705d20f422',1,'Test.gnomeSort()'],['../classsearchsortgraphics_1_1_algorithms_1_1_gnome_sort.html#a12e3a8f94e771de113b027d7e27a9eb9',1,'searchsortgraphics.Algorithms.GnomeSort.GnomeSort()']]],
+  ['gnomesort',['GnomeSort',['../classsearchsortgraphics_1_1_algorithms_1_1_gnome_sort.html#a12e3a8f94e771de113b027d7e27a9eb9',1,'searchsortgraphics.Algorithms.GnomeSort.GnomeSort()'],['../class_test.html#ab19ea45322dae5d29601de705d20f422',1,'Test.gnomeSort()']]],
   ['gnomesortoptimized',['GnomeSortOptimized',['../classsearchsortgraphics_1_1_algorithms_1_1_gnome_sort_optimized.html#a6c535d648ba9a847ecb2bb795f18c88e',1,'searchsortgraphics::Algorithms::GnomeSortOptimized']]],
   ['graphicalissorted',['graphicalIsSorted',['../classsearchsortgraphics_1_1_base_g_u_i.html#a711956b885fcfb2976c41520c8eea019',1,'searchsortgraphics::BaseGUI']]]
 ];

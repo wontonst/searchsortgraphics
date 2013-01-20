@@ -16,7 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
- *
+ * @brief Graphical loading bar.
  * @author YiWei Roy Zheng
  */
 public class LoadingBar extends JFrame {
