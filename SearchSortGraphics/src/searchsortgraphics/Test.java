@@ -235,6 +235,55 @@ class Test {
         return this.numbers;
     }
 
+    public Integer max()
+    {
+	Integer max = this.numbers.get(0);
+	for(int i = 0; i != this.numbers.size(); i++)
+	    if(this.numbers.get(i) > max)
+		max=this.numbers.get(i);
+	return max;
+    }
+    public void radixSort()
+    {
+ 
+    buckets_type buckets(10); // allocate buckets
+    // for sorting decimal numbers
+ 
+    int pow10 = 1; // pow10 holds powers of 10 (1, 10, 100, ...)
+ 
+    int max = this.max();
+ 
+    //begin radix sort
+    for(; max != 0 ; max/=10, pow10*=10)
+    {
+        // 1. determine which bucket each element should enter
+        // for each element in 'x':
+        for(input_type::const_iterator elem = x.begin(); elem != x.end(); ++elem)
+        {
+                // calculate the bucket number:
+                size_t const bucket_num = ( *elem / pow10 ) % 10;
+                // add the element to the list in the bucket:
+                buckets[ bucket_num ].push_back( *elem );
+        }
+ 
+        // 2. transfer results of buckets back into main array
+        input_type::iterator store_pos = x.begin();
+        // for each bucket:
+        for(buckets_type::iterator bucket = buckets.begin(); bucket != buckets.end(); ++bucket)
+        {
+                // for each element in the bucket:
+                for(buckets_type::value_type::const_iterator bucket_elem = bucket->begin();
+                        bucket_elem != bucket->end(); ++bucket_elem)
+                {
+                        // copy the element into next position in the main array
+                        *store_pos++ = *bucket_elem;
+                }
+                bucket->clear(); // forget the current bucket's list
+        }
+    }
+}
+    }
+
     public static void main(String[] args) {
         Test t = new Test();
         System.out.println(t.getArray());
