@@ -44,7 +44,7 @@ public class Core extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.numbers = new ArrayList<Integer>();
         this.setLayout(new FlowLayout());
-        this.screen = new DynamicScreen(this.numbers,Core.MAXX,Core.MAXY);
+        this.screen = new DynamicScreen(this.numbers, Core.MAXX, Core.MAXY);
         //	(new Thread(this.screen)).start();
         this.makePanels();
         this.setResizable(false);
@@ -67,7 +67,8 @@ public class Core extends JFrame {
     }
 
     /**
-     * @brief saves graphics on the Screen into the user specified directory
+     * @brief places an image to be rendered by the ImageSaverExecuter image
+     * rendering threadpool.
      */
     public void saveScreen() {
         File f = new File("./" + this.outputfilename.getText());
@@ -183,10 +184,8 @@ public class Core extends JFrame {
         this.resetFileNumber();
         this.gui.displayNumberGenerate();
     }
-    
 
-    public Random getRand()
-    {
-    return this.rand;
+    public Random getRand() {
+        return this.rand;
     }
 }
