@@ -5,8 +5,8 @@
 package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
-import searchsortgraphics.BaseGUI;
-import searchsortgraphics.LoadingBar;
+import searchsortgraphics.Core;
+import searchsortgraphics.GUI.LoadingBar;
 import searchsortgraphics.SSGRunnable;
 
 /**
@@ -16,11 +16,11 @@ import searchsortgraphics.SSGRunnable;
 public class Algorithm extends SSGRunnable implements Runnable {
 
     static int threadnum = -1;
-    protected BaseGUI main;
+    protected Core main;
     protected LoadingBar bar;
     volatile protected ArrayList<Integer> numbers;///<pointer to the BaseGUI's arraylits of numbers
 
-    public Algorithm(BaseGUI s) {
+    public Algorithm(Core s) {
         super(s);
         this.main = s;
         this.numbers = this.main.getNumbers();

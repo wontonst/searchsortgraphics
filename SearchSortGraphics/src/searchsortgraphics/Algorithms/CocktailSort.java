@@ -2,11 +2,11 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 
 public class CocktailSort extends Algorithm {
 
-    public CocktailSort(BaseGUI s) {
+    public CocktailSort(Core s) {
         super(s);
     }
 

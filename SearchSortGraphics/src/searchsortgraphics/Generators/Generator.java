@@ -1,7 +1,7 @@
 package searchsortgraphics.Generators;
 
 import java.util.ArrayList;
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 import searchsortgraphics.SSGRunnable;
 
 /**
@@ -11,10 +11,10 @@ import searchsortgraphics.SSGRunnable;
 public class Generator extends SSGRunnable implements Runnable {
 
     static int threadnum = -1;
-    protected BaseGUI main;
+    protected Core main;
     volatile protected ArrayList<Integer> numbers;///<reference to BaseGUI arraylist of numbers
 
-    public Generator(BaseGUI in) {
+    public Generator(Core in) {
         super(in);
         this.main = in;
         this.numbers = this.main.getNumbers();

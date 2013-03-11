@@ -10,9 +10,9 @@ import java.util.ArrayList;
  */
 public class SSGRunnable {
 
-    BaseGUI main;
+    Core main;
 
-    public SSGRunnable(BaseGUI main) {
+    public SSGRunnable(Core main) {
         this.main = main;
     }
 /**

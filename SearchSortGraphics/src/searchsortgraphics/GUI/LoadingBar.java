@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package searchsortgraphics;
+package searchsortgraphics.GUI;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -16,7 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
- * @brief Graphical loading bar.
+ * @brief Simple graphical loading bar.
  * @author YiWei Roy Zheng
  */
 public class LoadingBar extends JFrame {

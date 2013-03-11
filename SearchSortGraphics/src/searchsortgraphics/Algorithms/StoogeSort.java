@@ -2,14 +2,14 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 
 public class StoogeSort extends Algorithm {
 
     Integer ops;
     ArrayList<Integer> calc;
 
-    public StoogeSort(BaseGUI s) {
+    public StoogeSort(Core s) {
         super(s);
     }
 

@@ -1,5 +1,6 @@
 package searchsortgraphics;
 
+import searchsortgraphics.GUI.LoadingBar;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.image.BufferedImage;
@@ -12,10 +13,10 @@ import searchsortgraphics.GUI.MainDisplay;
 
 /**
  * @brief God object anti-pattern that controls most of the operations of this
- * application.
+ * application. Will be broken up eventually.
  * @author RoyZheng
  */
-public class BaseGUI extends JFrame {
+public class Core extends JFrame {
 
     public static final Integer MAXX = 1680;///<draw screen X size
     public static final Integer MAXY = 1050;///< draw screen Y size
@@ -36,14 +37,14 @@ public class BaseGUI extends JFrame {
      *
      * @brief initializes the BaseGUI object and sets up all JPanels
      */
-    BaseGUI() {
+    Core() {
         this.saver = new ImageSaverExecutor(this);
         this.filenumber = 0;
         this.rand = new Random();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.numbers = new ArrayList<Integer>();
         this.setLayout(new FlowLayout());
-        this.screen = new DynamicScreen(this.numbers,BaseGUI.MAXX,BaseGUI.MAXY);
+        this.screen = new DynamicScreen(this.numbers,Core.MAXX,Core.MAXY);
         //	(new Thread(this.screen)).start();
         this.makePanels();
         this.setResizable(false);
@@ -56,7 +57,7 @@ public class BaseGUI extends JFrame {
      * @brief makes the left menu with all the buttons
      */
     private void makePanels() {
-        Dimension dim = new Dimension(BaseGUI.MAXX, BaseGUI.MAXY);
+        Dimension dim = new Dimension(Core.MAXX, Core.MAXY);
         this.screen.setSize(dim);
         this.screen.setPreferredSize(dim);
 
@@ -74,8 +75,8 @@ public class BaseGUI extends JFrame {
             f.mkdir();
         }
         BufferedImage image = new BufferedImage(
-                BaseGUI.MAXX,
-                BaseGUI.MAXY,
+                Core.MAXX,
+                Core.MAXY,
                 BufferedImage.TYPE_INT_RGB);
         screen.printAll(image.getGraphics());
         this.saver.addRender(image, this.getFilename(), this.bar);

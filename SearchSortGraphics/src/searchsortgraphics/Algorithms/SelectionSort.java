@@ -2,11 +2,11 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 
 public class SelectionSort extends Algorithm {
 
-    public SelectionSort(BaseGUI s) {
+    public SelectionSort(Core s) {
         super(s);
     }
 

@@ -2,11 +2,11 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 
 public class CombSort extends Algorithm {
 
-    public CombSort(BaseGUI s) {
+    public CombSort(Core s) {
         super(s);
     }
 

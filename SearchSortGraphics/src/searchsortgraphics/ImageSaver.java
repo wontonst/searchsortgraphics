@@ -4,6 +4,7 @@
  */
 package searchsortgraphics;
 
+import searchsortgraphics.GUI.LoadingBar;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;

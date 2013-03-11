@@ -61,6 +61,6 @@ public class SearchSortGraphics {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        BaseGUI gui = new BaseGUI();
+        Core gui = new Core();
     }
 }

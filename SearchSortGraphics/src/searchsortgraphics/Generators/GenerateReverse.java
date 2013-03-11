@@ -1,13 +1,13 @@
 package searchsortgraphics.Generators;
 
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 
 /**
      * @brief generates numbers in reverse number with equal spacing
      */
 public class GenerateReverse extends Generator{
 
-    public GenerateReverse(BaseGUI i)
+    public GenerateReverse(Core i)
     {
 	super(i);
     }
@@ -15,7 +15,7 @@ public class GenerateReverse extends Generator{
     {
         this.numbers.clear();
         for (int i = 139; i != 0; i--) {
-            this.numbers.add(i * (BaseGUI.MAXY-20) / 139);
+            this.numbers.add(i * (Core.MAXY-20) / 139);
         } 
    }
 

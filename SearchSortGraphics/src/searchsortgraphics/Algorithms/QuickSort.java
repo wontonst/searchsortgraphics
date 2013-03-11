@@ -2,13 +2,13 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 
 public class QuickSort extends Algorithm {
 
     Integer op;
 
-    public QuickSort(BaseGUI s) {
+    public QuickSort(Core s) {
         super(s);
         this.op = 0;
     }

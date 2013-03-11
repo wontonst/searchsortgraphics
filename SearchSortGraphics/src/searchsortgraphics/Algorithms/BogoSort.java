@@ -1,10 +1,10 @@
 package searchsortgraphics.Algorithms;
 
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 
 public class BogoSort extends Algorithm {
 
-    public BogoSort(BaseGUI s) {
+    public BogoSort(Core s) {
         super(s);
     }
 

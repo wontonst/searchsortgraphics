@@ -2,7 +2,7 @@ package searchsortgraphics.GUI;
 
 import java.awt.event.ActionListener;
 import javax.swing.JPanel;
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 import searchsortgraphics.Generators.GenerateNeat;
 import searchsortgraphics.Generators.GenerateRandom;
 import searchsortgraphics.Generators.GenerateReverse;
@@ -18,9 +18,9 @@ public class GenerateNumbers extends JPanel {
     SSGGenerateButton generateneat;///<generates neat shuffled numbers
     ActionListener listener;
     ButtonDisplay buttons;
-    BaseGUI main;
+    Core main;
 
-    public GenerateNumbers(BaseGUI m, ActionListener al) {
+    public GenerateNumbers(Core m, ActionListener al) {
         this.listener = al;
         this.main = m;
         this.create();

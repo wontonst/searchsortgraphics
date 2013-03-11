@@ -2,11 +2,11 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 
 public class OddEvenSort extends Algorithm {
 
-    public OddEvenSort(BaseGUI s) {
+    public OddEvenSort(Core s) {
         super(s);
     }
 

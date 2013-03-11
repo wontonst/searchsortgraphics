@@ -9,7 +9,7 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JPanel;
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 
 /** 
  * @brief the user interface
@@ -24,9 +24,9 @@ public class MainDisplay extends JPanel implements ActionListener {
     SortChooser chooser;
     GenerateNumbers gen;
     CardLayout layout;
-    BaseGUI main;///<reference to central control
+    Core main;///<reference to central control
 
-    public MainDisplay(BaseGUI in) {
+    public MainDisplay(Core in) {
         super();
         this.main = in;
         this.setup();

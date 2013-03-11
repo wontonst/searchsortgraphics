@@ -2,11 +2,11 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 
 public class GnomeSortOptimized extends Algorithm {
 
-    public GnomeSortOptimized(BaseGUI s) {
+    public GnomeSortOptimized(Core s) {
         super(s);
     }
 

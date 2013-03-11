@@ -1,11 +1,11 @@
 package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 
 public class ShellSort extends Algorithm {
 
-    public ShellSort(BaseGUI s) {
+    public ShellSort(Core s) {
         super(s);
     }
 

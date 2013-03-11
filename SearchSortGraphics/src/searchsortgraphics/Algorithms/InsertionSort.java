@@ -1,11 +1,11 @@
 package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 
 public class InsertionSort extends Algorithm {
 
-    public InsertionSort(BaseGUI s) {
+    public InsertionSort(Core s) {
         super(s);
     }
 

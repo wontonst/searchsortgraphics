@@ -2,11 +2,11 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 
 public class BubbleSort extends Algorithm {
 
-    public BubbleSort(BaseGUI s) {
+    public BubbleSort(Core s) {
         super(s);
     }
 

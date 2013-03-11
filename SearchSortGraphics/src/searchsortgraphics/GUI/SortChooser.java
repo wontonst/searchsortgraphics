@@ -18,7 +18,7 @@ import searchsortgraphics.Algorithms.QuickSort;
 import searchsortgraphics.Algorithms.SelectionSort;
 import searchsortgraphics.Algorithms.ShellSort;
 import searchsortgraphics.Algorithms.StoogeSort;
-import searchsortgraphics.BaseGUI;
+import searchsortgraphics.Core;
 
 /**
  * @brief tabbed panel for displaying all the sorting algorithms
@@ -26,7 +26,7 @@ import searchsortgraphics.BaseGUI;
  */
 public class SortChooser extends JTabbedPane {
 
-    BaseGUI main;
+    Core main;
     ActionListener listener;
     //exchange sorts
     SSGSortButton bubblesort;///<starts bubble sort rendering
@@ -47,7 +47,7 @@ public class SortChooser extends JTabbedPane {
     ButtonDisplay insertion;
     ButtonDisplay selection;
 
-    public SortChooser(BaseGUI main, ActionListener al) {
+    public SortChooser(Core main, ActionListener al) {
         this.main = main;
         this.listener = al;
         this.create();

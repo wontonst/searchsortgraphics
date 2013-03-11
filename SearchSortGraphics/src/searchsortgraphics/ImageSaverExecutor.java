@@ -4,6 +4,7 @@
  */
 package searchsortgraphics;
 
+import searchsortgraphics.GUI.LoadingBar;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
@@ -23,11 +24,11 @@ import javax.imageio.ImageIO;
 public class ImageSaverExecutor {
 
     ExecutorService exec;
-    BaseGUI main;
+    Core main;
     volatile ArrayList<Future> threads;
     Integer maxthreads;
 
-    ImageSaverExecutor(BaseGUI in) {
+    ImageSaverExecutor(Core in) {
         this.maxthreads = 7;
         this.main = in;
         this.exec = Executors.newFixedThreadPool(maxthreads);

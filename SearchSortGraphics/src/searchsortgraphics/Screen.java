@@ -11,6 +11,7 @@ import javax.swing.JPanel;
  * @deprecated 
  * @brief integer array graphical display
  * Graphically displays the contents of an integer array
+ * This class has been replaced by searchsortgraphics.DynamicScreen
  * @author RoyZheng
  */
 public class Screen extends JPanel{
@@ -74,8 +75,8 @@ public class Screen extends JPanel{
             if (this.yellowtemp.contains(i)) {
                 g2.setColor(Color.YELLOW);
             }
-            g2.fillRect(loc, BaseGUI.MAXY - 10 - this.numbers.get(i), 10, this.numbers.get(i));
-            loc += ((BaseGUI.MAXX-10)/139);
+            g2.fillRect(loc, Core.MAXY - 10 - this.numbers.get(i), 10, this.numbers.get(i));
+            loc += ((Core.MAXX-10)/139);
         }
         this.compare.clear();
         this.yellowtemp.clear();
