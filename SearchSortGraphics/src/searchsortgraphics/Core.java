@@ -1,5 +1,6 @@
 package searchsortgraphics;
 
+import searchsortgraphics.GUI.DynamicScreen;
 import searchsortgraphics.GUI.LoadingBar;
 import java.awt.Dimension;
 import java.awt.FlowLayout;

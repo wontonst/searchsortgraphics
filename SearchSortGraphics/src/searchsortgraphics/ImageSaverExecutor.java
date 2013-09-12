@@ -29,7 +29,7 @@ public class ImageSaverExecutor {
     Integer maxthreads;
 
     ImageSaverExecutor(Core in) {
-        this.maxthreads = 7;
+        this.maxthreads = 8;
         this.main = in;
         this.exec = Executors.newFixedThreadPool(maxthreads);
         this.threads = new ArrayList<Future>();
