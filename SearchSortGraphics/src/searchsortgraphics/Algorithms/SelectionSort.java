@@ -3,12 +3,11 @@ package searchsortgraphics.Algorithms;
 import java.util.ArrayList;
 import java.util.Collections;
 import searchsortgraphics.Core;
-import searchsortgraphics.GUI.DynamicScreen;
 
 public class SelectionSort extends Algorithm {
 
-    public SelectionSort(Core c,DynamicScreen s) {
-       super(c,s);
+    public SelectionSort(Core s) {
+        super(s);
     }
 
     @Override

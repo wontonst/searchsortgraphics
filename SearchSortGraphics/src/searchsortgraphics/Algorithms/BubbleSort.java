@@ -7,7 +7,7 @@ import searchsortgraphics.Core;
 public class BubbleSort extends Algorithm {
 
     public BubbleSort(Core s) {
-        super(c,s);
+        super(s);
     }
 
     @Override

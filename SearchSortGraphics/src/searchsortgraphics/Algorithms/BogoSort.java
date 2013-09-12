@@ -1,13 +1,11 @@
 package searchsortgraphics.Algorithms;
 
 import searchsortgraphics.Core;
-import searchsortgraphics.GUI.DynamicScreen;
 
 public class BogoSort extends Algorithm {
 
-    public BogoSort(Core c,DynamicScreen s) {
-        super(c,s);
-        
+    public BogoSort(Core s) {
+        super(s);
     }
 
     @Override

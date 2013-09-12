@@ -3,12 +3,11 @@ package searchsortgraphics.Algorithms;
 import java.util.ArrayList;
 import java.util.Collections;
 import searchsortgraphics.Core;
-import searchsortgraphics.GUI.DynamicScreen;
 
 public class GnomeSortOptimized extends Algorithm {
 
-    public GnomeSortOptimized(Core c,DynamicScreen s) {
-        super(c,s);
+    public GnomeSortOptimized(Core s) {
+        super(s);
     }
 
     @Override

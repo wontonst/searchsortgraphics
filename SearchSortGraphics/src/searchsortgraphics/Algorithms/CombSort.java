@@ -7,7 +7,7 @@ import searchsortgraphics.Core;
 public class CombSort extends Algorithm {
 
     public CombSort(Core s) {
-        super(c,s);
+        super(s);
     }
 
     @Override
