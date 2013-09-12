@@ -21,6 +21,8 @@ public class Core extends JFrame {
 
     public static final Integer MAXX = 1680;///<draw screen X size
     public static final Integer MAXY = 1050;///< draw screen Y size
+    public static final Integer PREVIEWX = 600;
+    public static final Integer PREVIEWY = 500;
     public static final Integer SELECTORMAXX = 200;///<selector screen X size
     LoadingBar bar;///<loading bar frame
     ImageSaverExecutor saver;///<executorservice used to save frames
@@ -47,7 +49,7 @@ public class Core extends JFrame {
         this.numbers = new ArrayList<Integer>();
         this.setLayout(new FlowLayout());
         this.screen = new DynamicScreen(this.numbers, Core.MAXX, Core.MAXY);
-        this.preview = new DynamicScreen(this.numbers, 600, 500);
+        this.preview = new DynamicScreen(this.numbers, PREVIEWX, PREVIEWY);
         //	(new Thread(this.screen)).start();
         this.makePanels();
         this.setResizable(false);
@@ -59,13 +61,15 @@ public class Core extends JFrame {
     public void displayPreview() {
 
         JFrame f = new JFrame();
-        f.setSize(810, 610);
+        f.setSize(PREVIEWX + 10, PREVIEWY + 10);
         f.add(this.preview);
         f.setVisible(true);
     }
-public DynamicScreen getPreview(){
-    return this.preview;
-}
+
+    public DynamicScreen getPreview() {
+        return this.preview;
+    }
+
     public DynamicScreen getScreen() {
         return this.screen;
     }
