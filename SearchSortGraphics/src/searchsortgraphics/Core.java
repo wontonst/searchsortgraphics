@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
-import searchsortgraphics.GUI.MainDisplay;
+import searchsortgraphics.GUI.GUI;
 
 /**
  * @brief God object anti-pattern that controls most of the operations of this
@@ -25,7 +25,7 @@ public class Core extends JFrame {
     ImageSaverExecutor saver;///<executorservice used to save frames
     DynamicScreen screen;///<where graphics get drawn onto
     volatile ArrayList<Integer> numbers;///<numbers to display;
-    MainDisplay gui;///<all gui
+    GUI gui;///<all gui
     JTextField outputfilename;///<directory to place output files into
     Integer filenumber;///<output picture file number
     Random rand;
@@ -61,7 +61,7 @@ public class Core extends JFrame {
         this.screen.setSize(dim);
         this.screen.setPreferredSize(dim);
 
-        this.gui = new MainDisplay(this);
+        this.gui = new GUI(this);
         this.add(this.gui);
         this.outputfilename = new JTextField("outputfiledirectory");
     }

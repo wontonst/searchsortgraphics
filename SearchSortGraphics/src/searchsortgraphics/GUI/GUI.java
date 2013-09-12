@@ -12,10 +12,10 @@ import javax.swing.JPanel;
 import searchsortgraphics.Core;
 
 /** 
- * @brief the user interface
+ * @brief the main user interface with all buttons, displays, etc.
  * @author RoyZheng
  */
-public class MainDisplay extends JPanel implements ActionListener {
+public class GUI extends JPanel implements ActionListener {
 
     public static int MAXX = 800;
     public static int MAXY = 600;
@@ -26,7 +26,7 @@ public class MainDisplay extends JPanel implements ActionListener {
     CardLayout layout;
     Core main;///<reference to central control
 
-    public MainDisplay(Core in) {
+    public GUI(Core in) {
         super();
         this.main = in;
         this.setup();
@@ -37,13 +37,13 @@ public class MainDisplay extends JPanel implements ActionListener {
         this.chooser = new SortChooser(this.main, this);
         this.gen = new GenerateNumbers(this.main, this);
 
-        Dimension dim = new Dimension(MainDisplay.MAXX, MainDisplay.MAXY);
+        Dimension dim = new Dimension(GUI.MAXX, GUI.MAXY);
         this.setSize(dim);
         this.setPreferredSize(dim);
 
         this.setLayout(this.layout);
-        this.add(this.gen, MainDisplay.NUMBER_GENERATE);
-        this.add(this.chooser, MainDisplay.SORT_CHOOSE);
+        this.add(this.gen, GUI.NUMBER_GENERATE);
+        this.add(this.chooser, GUI.SORT_CHOOSE);
         this.displayNumberGenerate();
     }
 
@@ -66,13 +66,13 @@ public class MainDisplay extends JPanel implements ActionListener {
      * @brief displays the sort choose page
      */
     public void displaySortChoose() {
-        this.layout.show(this, MainDisplay.SORT_CHOOSE);
+        this.layout.show(this, GUI.SORT_CHOOSE);
     }
 
     /**
      * @brief displays the number generation page
      */
     public void displayNumberGenerate() {
-        this.layout.show(this, MainDisplay.NUMBER_GENERATE);
+        this.layout.show(this, GUI.NUMBER_GENERATE);
     }
 }

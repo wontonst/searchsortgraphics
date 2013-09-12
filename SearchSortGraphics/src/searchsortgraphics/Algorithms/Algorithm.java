@@ -13,7 +13,7 @@ import searchsortgraphics.SSGRunnable;
  * @brief Superclass for all sorting algorithms.
  * @author RoyZheng
  */
-public class Algorithm extends SSGRunnable implements Runnable {
+public abstract class Algorithm extends SSGRunnable implements Runnable {
 
     static int threadnum = -1;
     protected Core main;
@@ -26,13 +26,9 @@ public class Algorithm extends SSGRunnable implements Runnable {
         this.numbers = this.main.getNumbers();
     }
 
-    public int calculateOperations() {
-        throw new UnsupportedOperationException("CANNOT RUN Algorithm.calculateOperations: abstract method.");
-    }
+    public abstract int calculateOperations();
 
-    public void perform() {
-        throw new UnsupportedOperationException("CANNOT RUN Algorithm.perform: abstract method.");
-    }
+    public abstract void perform();
 
     /**
      * @brief begins rendering sequence. Note that the numbers arraylist should
