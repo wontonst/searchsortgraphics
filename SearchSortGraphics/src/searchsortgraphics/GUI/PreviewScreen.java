@@ -9,8 +9,8 @@ import javax.swing.JFrame;
 /**
  *
  * @author RoyZheng
- */
-public class PreviewScreen extends JFrame{
+
+public class PreviewScreen extends DynamicScreen{
     
     public PreviewScreen(){
         
@@ -18,3 +18,4 @@ public class PreviewScreen extends JFrame{
         this.setVisible(true);
     }
 }
+ */

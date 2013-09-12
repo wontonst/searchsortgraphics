@@ -47,6 +47,8 @@ public abstract class Algorithm extends SSGRunnable implements Runnable {
         this.bar = new LoadingBar(ops);
         this.main.setLoadingBar(this.bar);
 
+        this.main.displayPreview();
+        
         this.main.saveScreen();
         this.perform();
         this.main.finishRender();

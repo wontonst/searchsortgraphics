@@ -30,6 +30,7 @@ public class Core extends JFrame {
     JTextField outputfilename;///<directory to place output files into
     Integer filenumber;///<output picture file number
     Random rand;
+    DynamicScreen preview;
 
     /**
      * Sets up a nonresizeable JFrame size BaseGUI.MAXX by BaseGUI.MAXY.
@@ -46,6 +47,7 @@ public class Core extends JFrame {
         this.numbers = new ArrayList<Integer>();
         this.setLayout(new FlowLayout());
         this.screen = new DynamicScreen(this.numbers, Core.MAXX, Core.MAXY);
+        this.preview = new DynamicScreen(this.numbers, 600, 500);
         //	(new Thread(this.screen)).start();
         this.makePanels();
         this.setResizable(false);
@@ -53,9 +55,21 @@ public class Core extends JFrame {
         //this.setSize(BaseGUI.MAXX + BaseGUI.SELECTORMAXX, BaseGUI.MAXY);
         this.setVisible(true);
     }
-public DynamicScreen getScreen(){
-    return this.screen;
+
+    public void displayPreview() {
+
+        JFrame f = new JFrame();
+        f.setSize(810, 610);
+        f.add(this.preview);
+        f.setVisible(true);
+    }
+public DynamicScreen getPreview(){
+    return this.preview;
 }
+    public DynamicScreen getScreen() {
+        return this.screen;
+    }
+
     /**
      * @brief makes the left menu with all the buttons
      */
@@ -74,6 +88,7 @@ public DynamicScreen getScreen(){
      * rendering threadpool.
      */
     public void saveScreen() {
+        this.preview.repaint();
         File f = new File("./" + this.outputfilename.getText());
         if (!f.exists()) {
             f.mkdir();
@@ -170,10 +185,6 @@ public DynamicScreen getScreen(){
 
     public void resetFileNumber() {
         this.filenumber = 0;
-    }
-
-    public DynamicScreen getScreen() {
-        return this.screen;
     }
 
     public void debug() {

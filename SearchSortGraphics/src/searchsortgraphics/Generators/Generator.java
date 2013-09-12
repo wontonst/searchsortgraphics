@@ -24,6 +24,7 @@ public class Generator extends SSGRunnable implements Runnable {
         this.generate();
         this.main.repaint();
         this.main.getScreen().rebuild();
+        this.main.getPreview().rebuild();
         System.out.println("Successfully generated new set of numbers.");
     }
 
