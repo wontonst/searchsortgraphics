@@ -3,13 +3,14 @@ package searchsortgraphics.Algorithms;
 import java.util.ArrayList;
 import java.util.Collections;
 import searchsortgraphics.Core;
+import searchsortgraphics.GUI.DynamicScreen;
 
 public class QuickSort extends Algorithm {
 
     Integer op;
 
-    public QuickSort(Core s) {
-        super(s);
+    public QuickSort(Core c,DynamicScreen s) {
+        super(c,s);
         this.op = 0;
     }
 

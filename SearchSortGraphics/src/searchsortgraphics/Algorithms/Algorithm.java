@@ -6,6 +6,7 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import searchsortgraphics.Core;
+import searchsortgraphics.GUI.DynamicScreen;
 import searchsortgraphics.GUI.LoadingBar;
 import searchsortgraphics.SSGRunnable;
 
@@ -17,12 +18,14 @@ public abstract class Algorithm extends SSGRunnable implements Runnable {
 
     static int threadnum = -1;
     protected Core main;
+    protected DynamicScreen screen;
     protected LoadingBar bar;
     volatile protected ArrayList<Integer> numbers;///<pointer to the BaseGUI's arraylits of numbers
 
-    public Algorithm(Core s) {
-        super(s);
-        this.main = s;
+    public Algorithm(Core c) {
+        super(c);
+        this.main = c;
+        this.screen = c.getScreen();
         this.numbers = this.main.getNumbers();
     }
 

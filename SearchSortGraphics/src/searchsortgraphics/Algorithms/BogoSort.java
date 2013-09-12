@@ -1,11 +1,13 @@
 package searchsortgraphics.Algorithms;
 
 import searchsortgraphics.Core;
+import searchsortgraphics.GUI.DynamicScreen;
 
 public class BogoSort extends Algorithm {
 
-    public BogoSort(Core s) {
-        super(s);
+    public BogoSort(Core c,DynamicScreen s) {
+        super(c,s);
+        
     }
 
     @Override
@@ -25,6 +27,6 @@ public class BogoSort extends Algorithm {
 
     @Override
     public int calculateOperations() {
-        return 999999999;
+        return 999999999; //+-100% margin of error
     }
 }

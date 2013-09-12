@@ -2,11 +2,12 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import searchsortgraphics.Core;
+import searchsortgraphics.GUI.DynamicScreen;
 
 public class ShellSort extends Algorithm {
 
-    public ShellSort(Core s) {
-        super(s);
+    public ShellSort(Core c,DynamicScreen s) {
+       super(c,s);
     }
 
     @Override

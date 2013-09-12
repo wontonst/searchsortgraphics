@@ -2,11 +2,12 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import searchsortgraphics.Core;
+import searchsortgraphics.GUI.DynamicScreen;
 
 public class InsertionSort extends Algorithm {
 
-    public InsertionSort(Core s) {
-        super(s);
+    public InsertionSort(Core c,DynamicScreen s) {
+        super(c,s);
     }
 
     @Override

@@ -3,11 +3,12 @@ package searchsortgraphics.Algorithms;
 import java.util.ArrayList;
 import java.util.Collections;
 import searchsortgraphics.Core;
+import searchsortgraphics.GUI.DynamicScreen;
 
 public class CocktailSort extends Algorithm {
 
-    public CocktailSort(Core s) {
-        super(s);
+    public CocktailSort(Core c,DynamicScreen s) {
+        super(c,s);;
     }
 
     @Override

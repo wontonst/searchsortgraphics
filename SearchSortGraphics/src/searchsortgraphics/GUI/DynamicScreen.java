@@ -14,15 +14,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
- * @brief advanced numbers array displayer. 
- * 
- * The DynamicScreen class replaces the
- * deprecated Screen class. Major improvements have been made. The DynamicScreen
- * automatically adjusts bar size according to the size requested by the user
- * during construction. Spacing, vertical scaling, and width are all dynamically
- * generated. Furthermore, significant performance advancements have been made
- * to displaying color. There are now only two arraylists that holds any type of
- * color, versus the old system of having an arraylist for each color.
+ * @brief advanced numbers array displayer.
+ *
+ * The DynamicScreen class replaces the deprecated Screen class. Major
+ * improvements have been made. The DynamicScreen automatically adjusts bar size
+ * according to the size requested by the user during construction. Spacing,
+ * vertical scaling, and width are all dynamically generated. Furthermore,
+ * significant performance advancements have been made to displaying color.
+ * There are now only two arraylists that holds any type of color, versus the
+ * old system of having an arraylist for each color.
  * @author RoyZheng
  */
 public class DynamicScreen extends JPanel {
@@ -41,12 +41,13 @@ public class DynamicScreen extends JPanel {
 
     private DynamicScreen() {
     }
-/**
- * @brief initializes the screen
- * @param in arraylist of numbers to build off of
- * @param x x-dimension requested
- * @param y  y-dimension requested
- */
+
+    /**
+     * @brief initializes the screen
+     * @param in arraylist of numbers to build off of
+     * @param x x-dimension requested
+     * @param y y-dimension requested
+     */
     public DynamicScreen(ArrayList<Integer> in, Integer x, Integer y) {
         if (in == null) {
             System.out.println("DynamicScreen: Screen initialized with a null ArrayList<Integer>!");
@@ -124,16 +125,24 @@ public class DynamicScreen extends JPanel {
         this.single.set(j, Color.RED);
     }
 
+    public void setSingleColor(Integer i, Color b) {
+        this.single.set(i, b);
+    }
+
+    public void setPersistentColor(Integer i, Color b) {
+        this.extended.set(i, b);
+    }
+
     public void setBlue(Integer i) {
-        this.single.set(i, Color.BLUE);
+        this.setSingleColor(i, Color.blue);
     }
 
     public void setRed(Integer i) {
-        this.single.set(i, Color.RED);
+        this.setSingleColor(i, Color.red);
     }
 
     public void setYellow(Integer i) {
-        this.single.set(i, Color.YELLOW);
+        this.setSingleColor(i, Color.yellow);
     }
 
     public void setPersistentBlue(Integer i) {

@@ -3,14 +3,15 @@ package searchsortgraphics.Algorithms;
 import java.util.ArrayList;
 import java.util.Collections;
 import searchsortgraphics.Core;
+import searchsortgraphics.GUI.DynamicScreen;
 
 public class StoogeSort extends Algorithm {
 
     Integer ops;
     ArrayList<Integer> calc;
 
-    public StoogeSort(Core s) {
-        super(s);
+    public StoogeSort(Core c,DynamicScreen s) {
+        super(c,s);
     }
 
     @Override

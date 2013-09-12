@@ -53,7 +53,9 @@ public class Core extends JFrame {
         //this.setSize(BaseGUI.MAXX + BaseGUI.SELECTORMAXX, BaseGUI.MAXY);
         this.setVisible(true);
     }
-
+public DynamicScreen getScreen(){
+    return this.screen;
+}
     /**
      * @brief makes the left menu with all the buttons
      */
