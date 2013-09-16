@@ -8,7 +8,7 @@ import searchsortgraphics.SSGRunnable;
  *@brief base class for generating an array of numbers to be operated on
  * @author RoyZheng
  */
-public class Generator extends SSGRunnable implements Runnable {
+public abstract class Generator extends SSGRunnable implements Runnable {
 
     static int threadnum = -1;
     protected Core main;
@@ -28,9 +28,7 @@ public class Generator extends SSGRunnable implements Runnable {
         System.out.println("Successfully generated new set of numbers.");
     }
 
-    public void generate() {
-        throw new UnsupportedOperationException("CANNOT RUN Generator.generate() WITHOUT EXTENDING A BASE CLASS");
-    }
+    public abstract void generate();
 
     public String getThreadName() {
         threadnum++;

@@ -55,16 +55,8 @@ public class DynamicScreen extends JPanel {
         this.numbers = in;
         this.x = x;
         this.y = y;
-        this.initialize();
-    }
-
-    /**
-     * @brief initializes the object
-     */
-    private void initialize() {
         this.single = new ArrayList<Color>();
         this.extended = new ArrayList<Color>();
-        this.rebuild();
     }
 
     /**
@@ -101,7 +93,7 @@ public class DynamicScreen extends JPanel {
 
     @Override
     public void paintComponent(Graphics g) {
-        
+
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
@@ -155,6 +147,7 @@ public class DynamicScreen extends JPanel {
     }
 
     public void setPersistentRed(Integer i) {
+       // System.out.println(this.extended.size() + " ," + this.single.size() + "," + this.numbers.size());
         this.extended.set(i, Color.RED);
     }
 

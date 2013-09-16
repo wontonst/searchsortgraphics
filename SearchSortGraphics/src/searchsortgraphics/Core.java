@@ -26,12 +26,13 @@ public class Core extends JFrame {
     public static final Integer SELECTORMAXX = 200;///<selector screen X size
     LoadingBar bar;///<loading bar frame
     ImageSaverExecutor saver;///<executorservice used to save frames
-    DynamicScreen screen;///<where graphics get drawn onto
     volatile ArrayList<Integer> numbers;///<numbers to display;
     GUI gui;///<all gui
     JTextField outputfilename;///<directory to place output files into
     Integer filenumber;///<output picture file number
     Random rand;
+    ScreenManager screenmgr = new ScreenManager();
+    DynamicScreen screen;///<where graphics get drawn onto
     DynamicScreen preview;
 
     /**
@@ -50,6 +51,8 @@ public class Core extends JFrame {
         this.setLayout(new FlowLayout());
         this.screen = new DynamicScreen(this.numbers, Core.MAXX, Core.MAXY);
         this.preview = new DynamicScreen(this.numbers, PREVIEWX, PREVIEWY);
+        this.screenmgr.addScreen(this.screen);
+        this.screenmgr.addScreen(this.preview);
         //	(new Thread(this.screen)).start();
         this.makePanels();
         this.setResizable(false);
@@ -59,7 +62,6 @@ public class Core extends JFrame {
     }
 
     public void displayPreview() {
-
         JFrame f = new JFrame();
         f.setSize(PREVIEWX + 10, PREVIEWY + 10);
         f.add(this.preview);
@@ -135,6 +137,10 @@ public class Core extends JFrame {
             }
         }
         return true;
+    }
+
+    public ScreenManager screenOperation() {
+        return this.screenmgr;
     }
 
     /**
