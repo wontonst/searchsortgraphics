@@ -136,47 +136,44 @@ class Test {
         }
     }
 
-    public void stoogeSort()
-    {
-        this.stoogeSort(0,this.numbers.size()-1);
+    public void stoogeSort() {
+        this.stoogeSort(0, this.numbers.size() - 1);
     }
-    public void stoogeSort(Integer i, Integer j)
-    {
+
+    public void stoogeSort(Integer i, Integer j) {
         //System.out.println("lolstoge");
         if (this.numbers.get(j) < this.numbers.get(i)) {
-            this.swap(i,j);
+            this.swap(i, j);
         }
         if ((j - i + 1) >= 3) {
             Integer t = (j - i + 1) / 3;
-            this.stoogeSort(i  , j-t);
-            this.stoogeSort(i+t, j  );
-            this.stoogeSort(i  , j-t);
+            this.stoogeSort(i, j - t);
+            this.stoogeSort(i + t, j);
+            this.stoogeSort(i, j - t);
         }
 
     }
+
     public void bogoSort() {
 
-        while(!this.isSorted())
-        {
+        while (!this.isSorted()) {
             System.out.println(this.numbers);
             this.shuffle();
         }
     }
-    public void insertionSort()
-    {
-        for (int i = 1; i != this.numbers.size(); i++)
-        {
-            for(int ii = 0; ii != i; ii++)
-            {
-                if(this.numbers.get(ii) > this.numbers.get(i)) {
-                    this.numbers.add(ii,this.numbers.get(i));
-                    this.numbers.remove((int)i+1);
+
+    public void insertionSort() {
+        for (int i = 1; i != this.numbers.size(); i++) {
+            for (int ii = 0; ii != i; ii++) {
+                if (this.numbers.get(ii) > this.numbers.get(i)) {
+                    this.numbers.add(ii, this.numbers.get(i));
+                    this.numbers.remove((int) i + 1);
                 }
             }
         }
     }
-    public void shuffle()
-    {
+
+    public void shuffle() {
         ArrayList<Integer> newlist = new ArrayList<Integer>();
         while (!this.numbers.isEmpty()) {
             Integer num;
@@ -192,8 +189,8 @@ class Test {
             this.numbers.add(newlist.get(i));
         }
     }
-    public void shellSort()
-    {
+
+    public void shellSort() {
         ArrayList<Integer> gaps = new ArrayList<Integer>();
         gaps.add(701);
         gaps.add(301);
@@ -204,27 +201,28 @@ class Test {
         gaps.add(4);
         gaps.add(1);
 
-        for(int b = 0; b != gaps.size(); b++) {
-            int gap = (int)gaps.get(b);
+        for (int b = 0; b != gaps.size(); b++) {
+            int gap = (int) gaps.get(b);
             for (int i = gap; i < this.numbers.size(); i++) {
                 Integer temp = this.numbers.get(i);
                 int j = i;
                 for (; j >= gap && this.numbers.get(j - gap) > temp; j -= gap) {
-                    this.numbers.set(j,this.numbers.get(j - gap));
+                    this.numbers.set(j, this.numbers.get(j - gap));
                 }
-                this.numbers.set(j,temp);
+                this.numbers.set(j, temp);
             }
         }
     }
-    public Boolean isSorted()
-    {
-        for(int i = 1; i != this.numbers.size(); i++)
-        {
-            if(this.numbers.get(i) < this.numbers.get(i-1))
+
+    public Boolean isSorted() {
+        for (int i = 1; i != this.numbers.size(); i++) {
+            if (this.numbers.get(i) < this.numbers.get(i - 1)) {
                 return false;
+            }
         }
         return true;
     }
+
     public void swap(Integer i, Integer j) {
         Integer temp = this.numbers.get(i);//swapping
         this.numbers.set(i, this.numbers.get(j));
@@ -235,59 +233,93 @@ class Test {
         return this.numbers;
     }
 
-    public Integer max()
-    {
-	Integer max = this.numbers.get(0);
-	for(int i = 0; i != this.numbers.size(); i++)
-	    if(this.numbers.get(i) > max)
-		max=this.numbers.get(i);
-	return max;
-    }
-    public void radixSort()
-    {
- 
-    buckets_type buckets(10); // allocate buckets
-    // for sorting decimal numbers
- 
-    int pow10 = 1; // pow10 holds powers of 10 (1, 10, 100, ...)
- 
-    int max = this.max();
- 
-    //begin radix sort
-    for(; max != 0 ; max/=10, pow10*=10)
-    {
-        // 1. determine which bucket each element should enter
-        // for each element in 'x':
-        for(input_type::const_iterator elem = x.begin(); elem != x.end(); ++elem)
-        {
-                // calculate the bucket number:
-                size_t const bucket_num = ( *elem / pow10 ) % 10;
-                // add the element to the list in the bucket:
-                buckets[ bucket_num ].push_back( *elem );
+    public Integer max() {
+        Integer max = this.numbers.get(0);
+        for (int i = 0; i != this.numbers.size(); i++) {
+            if (this.numbers.get(i) > max) {
+                max = this.numbers.get(i);
+            }
         }
+        return max;
+    }
+    /*
+     public void radixSort() {
+
+     buckets_type buckets
+     (10); // allocate buckets
+     // for sorting decimal numbers
  
-        // 2. transfer results of buckets back into main array
-        input_type::iterator store_pos = x.begin();
-        // for each bucket:
-        for(buckets_type::iterator bucket = buckets.begin(); bucket != buckets.end(); ++bucket)
-        {
-                // for each element in the bucket:
-                for(buckets_type::value_type::const_iterator bucket_elem = bucket->begin();
-                        bucket_elem != bucket->end(); ++bucket_elem)
-                {
-                        // copy the element into next position in the main array
-                        *store_pos++ = *bucket_elem;
-                }
-                bucket->clear(); // forget the current bucket's list
-        }
-    }
-}
-    }
+     int pow10 = 1; // pow10 holds powers of 10 (1, 10, 100, ...)
+
+     int max = this.max();
+
+     //begin radix sort
+     for (; max != 0; max /= 10, pow10 *= 10) {
+     // 1. determine which bucket each element should enter
+     // for each element in 'x':
+     for (input_type : {
+                
+     }
+     :const_iterator elem = x.begin();
+     elem != x.end();
+     ++elem
+            
+     )
+     {
+     // calculate the bucket number:
+     size_t const bucket_num = ( * elem / pow10) % 10;
+     // add the element to the list in the bucket:
+     buckets[ bucket_num].push_back( * elem);
+     }
+
+     // 2. transfer results of buckets back into main array
+     input_type::iterator store_pos = x.begin();
+     // for each bucket:
+     for (buckets_type : {
+                
+     }
+     :iterator bucket = buckets.begin();
+     bucket != buckets.end();
+     ++bucket
+            
+     )
+     {
+     // for each element in the bucket:
+     for (buckets_type : {
+                    
+     }
+     :value_type::const_iterator bucket_elem = bucket - > begin();
+     bucket_elem != bucket - > end();
+     ++bucket_elem
+                
+     )
+     {
+     // copy the element into next position in the main array
+     * store_pos++ =  * bucket_elem;
+     }
+     bucket - > clear(); // forget the current bucket's list
+     }
+     }
+     }*/
 
     public static void main(String[] args) {
         Test t = new Test();
         System.out.println(t.getArray());
         t.shellSort();
         System.out.println(t.getArray());
+
+        int num = 100;
+        int sum = 0;
+        for (int s = 1; s * s <= num; s++) {
+            if (num % s == 0) {
+                sum += s;
+                System.out.println("s:"+s);
+                if (s * s != num && s != 1) {
+                    sum += num / s;
+                    System.out.println("num/s:"+num/s);
+                }
+            }
+        }
+        System.out.println(sum);
     }
 }
