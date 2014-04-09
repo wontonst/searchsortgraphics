@@ -1,7 +1,7 @@
 package searchsortgraphics.Algorithms;
 
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import searchsortgraphics.Core;
 
 public class OddEvenSort extends Algorithm {
@@ -11,20 +11,20 @@ public class OddEvenSort extends Algorithm {
     }
 
     @Override
-    public void perform() {
+    public void performSort(List<Integer> array) {
         Boolean sorted = false;
         while (!sorted) {
             sorted = true;
-            for (int i = 1; i < this.numbers.size(); i += 2) {
+            for (int i = 1; i < array.size(); i += 2) {
                 this.main.compare(i, i - 1);
-                if (this.numbers.get(i) < this.numbers.get(i - 1)) {
+                if (array.get(i) < array.get(i - 1)) {
                     this.main.swap(i, i - 1);
                     sorted = false;
                 }
             }
-            for (int i = 2; i < this.numbers.size(); i += 2) {
+            for (int i = 2; i < array.size(); i += 2) {
                 this.main.compare(i, i - 1);
-                if (this.numbers.get(i) < this.numbers.get(i - 1)) {
+                if (array.get(i) < array.get(i - 1)) {
                     this.main.swap(i, i - 1);
                     sorted = false;
                 }
@@ -34,8 +34,8 @@ public class OddEvenSort extends Algorithm {
     }
 
     @Override
-    public int calculateOperations() {
-        ArrayList<Integer> calc = this.copyArray();
+    public int performCalculateOperations(List<Integer> array) {
+        List<Integer> calc = array;
         int num = 1;
         Boolean sorted = false;
         while (!sorted) {

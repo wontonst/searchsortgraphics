@@ -2,6 +2,7 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import searchsortgraphics.Core;
 
 public class QuickSort extends Algorithm {
@@ -14,24 +15,24 @@ public class QuickSort extends Algorithm {
     }
 
     @Override
-    public void perform() {
+    public void performSort(List<Integer> array) {
 
-        this.quickSort(this.main.getNumbers(), 0, this.main.getNumbers().size() - 1);
+        this.quickSort(array, 0, array.size() - 1);
         this.main.saveScreen();
 
     }
 
-    public void quickSort(ArrayList<Integer> in, Integer l, Integer r) {
+    private void quickSort(List<Integer> array, Integer l, Integer r) {
         Integer left = l, right = r;
-        Integer pivot = this.main.getNumbers().get(l + (r - l) / 2);
+        Integer pivot = array.get(l + (r - l) / 2);
         this.main.setYellow(l + (r - l) / 2);
 
         while (left <= right) {
-            while (this.main.getNumbers().get(left) < pivot) {
+            while (array.get(left) < pivot) {
                 this.main.compare(left, l + (r - l) / 2);
                 left++;
             }
-            while (this.main.getNumbers().get(right) > pivot) {
+            while (array.get(right) > pivot) {
                 this.main.compare(right, l + (r - l) / 2);
                 right--;
             }
@@ -43,23 +44,23 @@ public class QuickSort extends Algorithm {
             }
         }
         if (l < right) {
-            this.quickSort(this.main.getNumbers(), l, right);
+            this.quickSort(array, l, right);
         }
         if (left < r) {
-            this.quickSort(this.main.getNumbers(), left, r);
+            this.quickSort(array, left, r);
         }
     }
 
     @Override
-    public int calculateOperations() {
+    public int performCalculateOperations(List<Integer> array) {
         int num = 2;
-        this.calcQuickSort(this.main.getNumbers(), 0, this.main.getNumbers().size() - 1);
+        this.calcQuickSort(array, 0, array.size() - 1);
         num += this.op;
         return num;
     }
 
-    public void calcQuickSort(ArrayList<Integer> in, Integer l, Integer r) {
-        ArrayList<Integer> calc = this.copyArray();
+    public void calcQuickSort(List<Integer> array, Integer l, Integer r) {
+        List<Integer> calc = array;
         Integer left = l, right = r;
         Integer pivot = calc.get(l + (r - l) / 2);
         this.op++;
