@@ -1,5 +1,6 @@
 package searchsortgraphics.Algorithms;
 
+import java.util.List;
 import searchsortgraphics.Core;
 
 public class BogoSort extends Algorithm {
@@ -9,7 +10,7 @@ public class BogoSort extends Algorithm {
     }
 
     @Override
-    public void perform() {
+    protected void performSort(List<Integer> array) {
         int iterations = 0;
         while (!this.main.graphicalIsSorted()) {
             this.shuffle();
@@ -24,7 +25,7 @@ public class BogoSort extends Algorithm {
     }
 
     @Override
-    public int calculateOperations() {
+    public int performCalculateOperations() {
         return 999999999; //+-100% margin of error
     }
 }
