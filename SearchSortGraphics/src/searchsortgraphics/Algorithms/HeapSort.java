@@ -24,9 +24,8 @@ public class HeapSort extends Algorithm {
 
     @Override
     public void perform() {
-        for (int i = 0; i != this.numbers.size(); i++) {
+        //heapfiy
+        int start = Math.floor((this.numbers.size() - 2) / 2);
 
-        }
     }
-
 }

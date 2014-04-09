@@ -5,6 +5,7 @@
 package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
+import java.util.List;
 import searchsortgraphics.Core;
 import searchsortgraphics.GUI.DynamicScreen;
 import searchsortgraphics.GUI.LoadingBar;
@@ -20,7 +21,7 @@ public abstract class Algorithm extends SSGRunnable implements Runnable {
     protected Core main;
     protected DynamicScreen screen;
     protected LoadingBar bar;
-    volatile protected ArrayList<Integer> numbers;///<pointer to the BaseGUI's arraylits of numbers
+    volatile private ArrayList<Integer> numbers;///<pointer to the BaseGUI's arraylits of numbers
 
     public Algorithm(Core c) {
         super(c);
@@ -29,9 +30,17 @@ public abstract class Algorithm extends SSGRunnable implements Runnable {
         this.numbers = this.main.getNumbers();
     }
 
-    public abstract int calculateOperations();
+    public final int calculateOperations() {
+        return this.performCalculateOperations(this.copyArray());
+    }
 
-    public abstract void perform();
+    protected abstract int performCalculateOperations(List<Integer> array);
+
+    public final void perform() {
+        this.performSort(this.numbers);
+    }
+
+    protected abstract void performSort(List<Integer> array);
 
     /**
      * @brief begins rendering sequence. Note that the numbers arraylist should
@@ -48,7 +57,7 @@ public abstract class Algorithm extends SSGRunnable implements Runnable {
         this.main.setLoadingBar(this.bar);
 
         this.main.displayPreview();
-        
+
         this.main.saveScreen();
         this.perform();
         this.main.finishRender();
