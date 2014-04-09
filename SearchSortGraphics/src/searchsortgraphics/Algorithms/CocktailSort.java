@@ -43,9 +43,9 @@ public class CocktailSort extends Algorithm {
     }
 
     @Override
-    public int calculateOperations() {
+    public int performCalculateOperations(List<Integer> array) {
         int num = 1;
-        ArrayList<Integer> calc = this.copyArray();
+        List<Integer> calc = array;
 
         Integer top = 0;
         Integer bot = 0;

@@ -2,6 +2,7 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import searchsortgraphics.Core;
 
 public class GnomeSortOptimized extends Algorithm {
@@ -11,13 +12,13 @@ public class GnomeSortOptimized extends Algorithm {
     }
 
     @Override
-    public void perform() {
+    public void performSort(List<Integer> array) {
         this.main.saveScreen();
         int pos = 1;
         int last = 0;
-        while (pos < this.numbers.size()) {
+        while (pos < array.size()) {
             this.main.compare(pos, pos - 1);
-            if (this.numbers.get(pos) >= this.numbers.get(pos - 1)) {
+            if (array.get(pos) >= array.get(pos - 1)) {
                 if (last != 0) {
                     pos = last;
                     last = 0;
@@ -38,9 +39,9 @@ public class GnomeSortOptimized extends Algorithm {
     }
 
     @Override
-    public int calculateOperations() {
+    public int performCalculateOperations(List<Integer> array) {
         int num = 1;
-        ArrayList<Integer> calc = this.copyArray();
+        List<Integer> calc = array;
         int pos = 1;
         int last = 0;
         while (pos < calc.size()) {

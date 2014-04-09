@@ -1,6 +1,7 @@
 package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
+import java.util.List;
 import searchsortgraphics.Core;
 
 public class InsertionSort extends Algorithm {
@@ -10,14 +11,14 @@ public class InsertionSort extends Algorithm {
     }
 
     @Override
-    public void perform() {
-        for (int i = 1; i != this.numbers.size(); i++) {
+    public void performSort(List<Integer> array) {
+        for (int i = 1; i != array.size(); i++) {
             this.main.getScreen().setPersistentYellow(i);
             for (int ii = 0; ii != i; ii++) {
                 this.main.compare(ii, i);
-                if (this.numbers.get(ii) > this.numbers.get(i)) {
-                    this.numbers.add(ii, this.numbers.get(i));
-                    this.numbers.remove((int) i + 1);
+                if (array.get(ii) > array.get(i)) {
+                    array.add(ii, array.get(i));
+                    array.remove((int) i + 1);
                     this.main.setRed(ii);
                     break;
                 }
@@ -27,8 +28,8 @@ public class InsertionSort extends Algorithm {
     }
 
     @Override
-    public int calculateOperations() {
-        ArrayList<Integer> calc = this.copyArray();
+    public int performCalculateOperations(List<Integer> array) {
+        List<Integer> calc = array;
         int num = 1;
         for (int i = 1; i != calc.size(); i++) {
             num++;

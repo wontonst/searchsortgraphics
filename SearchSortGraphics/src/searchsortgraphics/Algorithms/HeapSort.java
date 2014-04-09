@@ -5,6 +5,7 @@
  */
 package searchsortgraphics.Algorithms;
 
+import java.util.List;
 import searchsortgraphics.Core;
 
 /**
@@ -18,14 +19,14 @@ public class HeapSort extends Algorithm {
     }
 
     @Override
-    public int calculateOperations() {
+    public int performCalculateOperations(List<Integer> array) {
 
     }
 
     @Override
-    public void perform() {
+    public void performSort(List<Integer> array) {
         //heapfiy
-        int start = Math.floor((this.numbers.size() - 2) / 2);
+        int start = Math.floor((array.size() - 2) / 2);
 
     }
 }

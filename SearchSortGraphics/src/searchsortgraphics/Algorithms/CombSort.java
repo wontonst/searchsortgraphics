@@ -2,6 +2,7 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import searchsortgraphics.Core;
 
 public class CombSort extends Algorithm {
@@ -11,9 +12,9 @@ public class CombSort extends Algorithm {
     }
 
     @Override
-    public void perform() {
+    public void performSort(List<Integer> array) {
         Boolean swapped = false;
-        Integer gap = this.numbers.size();
+        Integer gap = array.size();
         while (gap > 1 || swapped) {
             gap = (int) (gap / 1.247330950103979);
             if (gap < 1) {
@@ -21,9 +22,9 @@ public class CombSort extends Algorithm {
             }
             Integer i = 0;
             swapped = false;
-            while ((i + gap) < this.numbers.size()) {
+            while ((i + gap) < array.size()) {
                 this.main.compare(i, i + gap);
-                if (this.numbers.get(i) > this.numbers.get(i + gap)) {
+                if (array.get(i) > array.get(i + gap)) {
                     swapped = true;
                     this.main.swap(i, i + gap);
                 }
@@ -33,8 +34,8 @@ public class CombSort extends Algorithm {
     }
 
     @Override
-    public int calculateOperations() {
-        ArrayList<Integer> calc = this.copyArray();
+    public int performCalculateOperations(List<Integer> array) {
+        List<Integer> calc = array;
         int num = 1;
         Boolean swapped = false;
         Integer gap = calc.size();
