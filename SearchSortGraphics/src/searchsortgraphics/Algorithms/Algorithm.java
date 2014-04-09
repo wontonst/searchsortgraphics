@@ -18,7 +18,7 @@ import searchsortgraphics.SSGRunnable;
 public abstract class Algorithm extends SSGRunnable implements Runnable {
 
     static int threadnum = -1;
-    protected Core main;
+    public Core main;
     protected DynamicScreen screen;
     protected LoadingBar bar;
     volatile private ArrayList<Integer> numbers;///<pointer to the BaseGUI's arraylits of numbers
@@ -63,7 +63,7 @@ public abstract class Algorithm extends SSGRunnable implements Runnable {
         this.main.finishRender();
     }
 
-    public ArrayList<Integer> copyArray() {
+    private ArrayList<Integer> copyArray() {
         ArrayList<Integer> calc = new ArrayList<Integer>();
         for (int i = 0; i != this.main.getNumbers().size(); i++) {
             calc.add(this.main.getNumbers().get(i));

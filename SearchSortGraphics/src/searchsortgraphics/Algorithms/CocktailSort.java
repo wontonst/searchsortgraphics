@@ -2,6 +2,7 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import searchsortgraphics.Core;
 
 public class CocktailSort extends Algorithm {
@@ -11,16 +12,16 @@ public class CocktailSort extends Algorithm {
     }
 
     @Override
-    public void perform() {
+    public void performSort(List<Integer> array) {
         Integer top = 0;
         Integer bot = 0;
 
         Boolean swapped = false;
         do {
             swapped = false;
-            for (int i = 1 + bot; i != this.main.getNumbers().size() - top; i++) {
+            for (int i = 1 + bot; i != array.size() - top; i++) {
                 this.main.compare(i - 1, i);
-                if (this.main.getNumbers().get(i - 1) > this.main.getNumbers().get(i)) {
+                if (array.get(i - 1) > array.get(i)) {
                     this.main.swap(i - 1, i);
                     swapped = true;
                 }
@@ -30,9 +31,9 @@ public class CocktailSort extends Algorithm {
             }
             top++;
             swapped = false;
-            for (int i = this.main.getNumbers().size() - 1 - top; i != bot; i--) {
+            for (int i = array.size() - 1 - top; i != bot; i--) {
                 this.main.compare(i - 1, i);
-                if (this.main.getNumbers().get(i - 1) > this.main.getNumbers().get(i)) {
+                if (array.get(i - 1) > array.get(i)) {
                     this.main.swap(i - 1, i);
                     swapped = true;
                 }

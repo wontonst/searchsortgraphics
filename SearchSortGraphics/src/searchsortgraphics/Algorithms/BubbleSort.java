@@ -2,6 +2,7 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import searchsortgraphics.Core;
 
 public class BubbleSort extends Algorithm {
@@ -11,14 +12,14 @@ public class BubbleSort extends Algorithm {
     }
 
     @Override
-    public void perform() {
+    public void performSort(List<Integer> array) {
         Boolean sorted = false;
         int iteration = 0;
         while (!sorted) {
             sorted = true;
             for (int i = 1; (i != this.main.getNumbers().size() - iteration); i++) {
                 this.main.compare(i - 1, i);
-                if (this.main.getNumbers().get(i - 1) > this.main.getNumbers().get(i)) {
+                if (array.get(i - 1) > array.get(i)) {
                     this.main.swap(i - 1, i);
                     sorted = false;
                 }
@@ -28,9 +29,9 @@ public class BubbleSort extends Algorithm {
     }
 
     @Override
-    public int calculateOperations() {
+    public int performCalculateOperations(List<Integer> array) {
         int num = 1;
-        ArrayList<Integer> calc = this.copyArray();
+        List<Integer> calc = array;
         Boolean sorted = false;
         int iteration = 0;
         while (!sorted) {

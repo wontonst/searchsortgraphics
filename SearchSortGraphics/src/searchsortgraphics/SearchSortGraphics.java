@@ -5,7 +5,8 @@ package searchsortgraphics;
  *
  * @section summary Summary
  *
- * <p>SearchSortGraphics aims to graphically render all sorting and search
+ * <p>
+ * SearchSortGraphics aims to graphically render all sorting and search
  * algorithms and output an array of image files for encoding into a video. <a
  * href="http://fixounet.free.fr/avidemux/">Avidemux</a> is an excellent
  * software for this purpose. The program is written all in Java.</p>
@@ -25,6 +26,9 @@ package searchsortgraphics;
  * <li>Integrate loading bar into GUI</li>
  * <li>Refactor Core to migrate all screen operations to ScreenManager
  * class</li>
+ * <li>Algorithm has access to Core.numbers which is dangerous for Algorithm
+ * implementations. Separate Core's image save functions to a submodule and pass
+ * that to algorithm implementations rather than entire Core.</li>
  * <span style="text-decoration:line-through">
  * <li>Split the BaseGUI class to separate the algorithms from the rest of
  * class. </li>

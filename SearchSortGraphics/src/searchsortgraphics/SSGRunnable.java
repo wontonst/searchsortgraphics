@@ -15,16 +15,17 @@ public class SSGRunnable {
     public SSGRunnable(Core main) {
         this.main = main;
     }
-/**
- * @brief default constructor is disabled
- */
+
+    /**
+     * @brief default constructor is disabled
+     */
     private SSGRunnable() {
     }
 
     /**
      * @brief shuffles the entire numbers array
      */
-    public void shuffle() {
+    protected void shuffle() {
         ArrayList<Integer> newlist = new ArrayList<Integer>();
         while (!this.main.getNumbers().isEmpty()) {
             Integer num;

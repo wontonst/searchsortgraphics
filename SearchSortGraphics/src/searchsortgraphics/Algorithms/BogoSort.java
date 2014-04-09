@@ -25,7 +25,7 @@ public class BogoSort extends Algorithm {
     }
 
     @Override
-    public int performCalculateOperations() {
+    public int performCalculateOperations(List<Integer> array) {
         return 999999999; //+-100% margin of error
     }
 }
