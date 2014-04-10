@@ -1,6 +1,7 @@
 package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
+import java.util.List;
 import searchsortgraphics.Core;
 
 public class ShellSort extends Algorithm {
@@ -10,7 +11,7 @@ public class ShellSort extends Algorithm {
     }
 
     @Override
-    public void perform() {
+    public void performSort(List<Integer> array) {
         ArrayList<Integer> gaps = new ArrayList<Integer>();
         gaps.add(701);
         gaps.add(301);
@@ -23,15 +24,15 @@ public class ShellSort extends Algorithm {
 
         for (int b = 0; b != gaps.size(); b++) {
             int gap = (int) gaps.get(b);
-            for (int i = gap; i < this.numbers.size(); i++) {
-                Integer temp = this.numbers.get(i);
+            for (int i = gap; i < array.size(); i++) {
+                Integer temp = array.get(i);
                 int j = i;
-                for (; j >= gap && this.numbers.get(j - gap) > temp; j -= gap) {
+                for (; j >= gap && array.get(j - gap) > temp; j -= gap) {
                     this.main.compare(j - gap, j);
-                    this.numbers.set(j, this.numbers.get(j - gap));
+                    array.set(j, array.get(j - gap));
                     this.main.setRed(j);
                 }
-                this.numbers.set(j, temp);
+                array.set(j, temp);
                 this.main.setRed(j);
             }
         }
@@ -39,9 +40,9 @@ public class ShellSort extends Algorithm {
     }
 
     @Override
-    public int calculateOperations() {
+    public int performCalculateOperations(List<Integer> array) {
         int num = 1;
-        ArrayList<Integer> calc = this.copyArray();
+        List<Integer> calc = array;
         ArrayList<Integer> gaps = new ArrayList<Integer>();
         gaps.add(701);
         gaps.add(301);

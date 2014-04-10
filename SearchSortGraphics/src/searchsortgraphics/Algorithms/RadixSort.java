@@ -1,7 +1,6 @@
 package searchsortgraphics.Algorithms;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.List;
 import searchsortgraphics.BaseGUI;
 
 public class RadixSort extends Algorithm {
@@ -11,11 +10,11 @@ public class RadixSort extends Algorithm {
     }
 
     @Override
-    public void perform() {
+    public void performSort(List<Integer> array) {
 
     }
 
     @Override
-    public int calculateOperations() {
+    public int performCalculateOperations(List<Integer> array) {
     }
 }

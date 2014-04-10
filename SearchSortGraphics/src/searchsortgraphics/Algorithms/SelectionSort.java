@@ -2,6 +2,7 @@ package searchsortgraphics.Algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import searchsortgraphics.Core;
 
 public class SelectionSort extends Algorithm {
@@ -11,14 +12,14 @@ public class SelectionSort extends Algorithm {
     }
 
     @Override
-    public void perform() {
-        for (int i = 0; i != this.main.getNumbers().size(); i++) {
+    public void performSort(List<Integer> array) {
+        for (int i = 0; i != array.size(); i++) {
             Integer min = i;
             this.main.getScreen().setPersistentRed(min);
             this.main.saveScreen();
-            for (int ii = i; ii != this.main.getNumbers().size(); ii++) {
+            for (int ii = i; ii != array.size(); ii++) {
                 this.main.setBlue(ii);
-                if (this.main.getNumbers().get(min) > this.main.getNumbers().get(ii)) {
+                if (array.get(min) > array.get(ii)) {
                     this.main.getScreen().removePersistent(min);
                     min = ii;
                     this.main.getScreen().setPersistentRed(min);
@@ -30,8 +31,8 @@ public class SelectionSort extends Algorithm {
     }
 
     @Override
-    public int calculateOperations() {
-        ArrayList<Integer> calc = this.copyArray();
+    public int performCalculateOperations(List<Integer> array) {
+        List<Integer> calc = array;
         int num = 1;
         for (int i = 0; i != calc.size(); i++) {
             Integer min = i;
